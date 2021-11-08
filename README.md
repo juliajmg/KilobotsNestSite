@@ -16,7 +16,6 @@
 
 ## Pruebas
 
-
 ### 1. Cuántos mensajes reciben por segundo
 
 script: messages.hex
@@ -43,7 +42,7 @@ script: unique_bots_seen.c
   - 11 en adelante: luz morada
 
 
-### 3. Bots vistos en $\Delta t$
+#### 2.1. Bots vistos en $\Delta t$
 script: Unique_bots_seen_Deltat.c
 
 1. Random walk
@@ -55,4 +54,12 @@ script: Unique_bots_seen_Deltat.c
 7. Se toma fotografía del estado final.
 
 
-### 4. Desincronización temporal entre bots
+### 3. Desincronización temporal entre bots
+
+### 4. Random walk tests
+
+script: random_motion.hex
+
+Los vídeos pueden ser vistos aquí:
+
+https://mega.nz/folder/3GgwDIAD#aVKxpuHiPXFEw4ke6cx-Jg
