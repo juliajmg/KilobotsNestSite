@@ -56,7 +56,7 @@ script: Unique_bots_seen_Deltat.c
 
 ### 3. Desincronización temporal entre bots
 
-### 4. Random walk tests
+### 4. Random walk tests 
 
 script: random_motion.hex
 
