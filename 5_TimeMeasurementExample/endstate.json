@@ -1,0 +1,285 @@
+{
+  "bot_states": [
+    {
+      "ID": 0,
+      "direction": 1.1461956129051416,
+      "state": {},
+      "x_position": -266.0,
+      "y_position": -25.0
+    },
+    {
+      "ID": 1,
+      "direction": 3.9120371258545545,
+      "state": {},
+      "x_position": 137.35658955593814,
+      "y_position": -354.88315426604009
+    },
+    {
+      "ID": 2,
+      "direction": 4.8926077545114417,
+      "state": {},
+      "x_position": 197.0,
+      "y_position": -279.0
+    },
+    {
+      "ID": 3,
+      "direction": 5.6172054508796769,
+      "state": {},
+      "x_position": 111.0,
+      "y_position": 95.0
+    },
+    {
+      "ID": 4,
+      "direction": 1.0286098623237945,
+      "state": {},
+      "x_position": -272.0,
+      "y_position": 331.0
+    },
+    {
+      "ID": 5,
+      "direction": 0.41023022382687641,
+      "state": {},
+      "x_position": -259.21663059785567,
+      "y_position": 116.45580807891349
+    },
+    {
+      "ID": 6,
+      "direction": 4.2695456546397841,
+      "state": {},
+      "x_position": -25.0,
+      "y_position": -303.0
+    },
+    {
+      "ID": 7,
+      "direction": 0.44153821556468531,
+      "state": {},
+      "x_position": 45.0,
+      "y_position": 140.0
+    },
+    {
+      "ID": 8,
+      "direction": 4.87210649076866,
+      "state": {},
+      "x_position": 139.0,
+      "y_position": 254.0
+    },
+    {
+      "ID": 9,
+      "direction": 5.2923756563691846,
+      "state": {},
+      "x_position": -291.78336940214433,
+      "y_position": 106.54419192108651
+    },
+    {
+      "ID": 10,
+      "direction": 2.5437700803828727,
+      "state": {},
+      "x_position": -296.0,
+      "y_position": -206.0
+    },
+    {
+      "ID": 11,
+      "direction": 4.916248885179427,
+      "state": {},
+      "x_position": -148.0,
+      "y_position": 328.0
+    },
+    {
+      "ID": 12,
+      "direction": 1.0032579835505693,
+      "state": {},
+      "x_position": 135.36155144699228,
+      "y_position": -314.12462956629417
+    },
+    {
+      "ID": 13,
+      "direction": 2.7870550890600074,
+      "state": {},
+      "x_position": -348.0,
+      "y_position": 189.0
+    },
+    {
+      "ID": 14,
+      "direction": 2.3033403132894392,
+      "state": {},
+      "x_position": 159.0,
+      "y_position": -131.0
+    },
+    {
+      "ID": 15,
+      "direction": 0.81966536923268807,
+      "state": {},
+      "x_position": 351.0,
+      "y_position": 5.0
+    },
+    {
+      "ID": 16,
+      "direction": 4.1667356107259277,
+      "state": {},
+      "x_position": 328.54605288057365,
+      "y_position": -81.027781312615403
+    },
+    {
+      "ID": 17,
+      "direction": 0.55864623561806681,
+      "state": {},
+      "x_position": -373.0,
+      "y_position": -70.0
+    },
+    {
+      "ID": 18,
+      "direction": 2.6119812924879362,
+      "state": {},
+      "x_position": 107.28185899706958,
+      "y_position": -333.99221616766573
+    },
+    {
+      "ID": 19,
+      "direction": 1.7215839043427485,
+      "state": {},
+      "x_position": 250.0,
+      "y_position": 134.0
+    },
+    {
+      "ID": 20,
+      "direction": 3.7743698402823842,
+      "state": {},
+      "x_position": 299.0,
+      "y_position": 239.0
+    },
+    {
+      "ID": 21,
+      "direction": 1.9457138147902979,
+      "state": {},
+      "x_position": -77.0,
+      "y_position": 43.0
+    },
+    {
+      "ID": 22,
+      "direction": 4.7410342739647184,
+      "state": {},
+      "x_position": -50.0,
+      "y_position": -228.0
+    },
+    {
+      "ID": 23,
+      "direction": 3.4198371443439659,
+      "state": {},
+      "x_position": 99.0,
+      "y_position": 176.0
+    },
+    {
+      "ID": 24,
+      "direction": 3.9621896090553586,
+      "state": {},
+      "x_position": 290.10020695375096,
+      "y_position": -64.370522508170637
+    },
+    {
+      "ID": 25,
+      "direction": 2.4503234611903832,
+      "state": {},
+      "x_position": -377.0,
+      "y_position": 239.0
+    },
+    {
+      "ID": 26,
+      "direction": 4.3072450301358094,
+      "state": {},
+      "x_position": -182.0,
+      "y_position": -285.0
+    },
+    {
+      "ID": 27,
+      "direction": 4.4315236894465269,
+      "state": {},
+      "x_position": -338.0,
+      "y_position": 94.0
+    },
+    {
+      "ID": 28,
+      "direction": 3.949206573905546,
+      "state": {},
+      "x_position": 46.0,
+      "y_position": -188.0
+    },
+    {
+      "ID": 29,
+      "direction": 1.1689253807197775,
+      "state": {},
+      "x_position": 284.0,
+      "y_position": 14.0
+    },
+    {
+      "ID": 30,
+      "direction": 6.0607543478658856,
+      "state": {},
+      "x_position": 133.4099834106577,
+      "y_position": -87.807391122257897
+    },
+    {
+      "ID": 31,
+      "direction": 0.92133354121728051,
+      "state": {},
+      "x_position": -174.0,
+      "y_position": -212.0
+    },
+    {
+      "ID": 32,
+      "direction": 2.2290705137341762,
+      "state": {},
+      "x_position": -202.0,
+      "y_position": 139.0
+    },
+    {
+      "ID": 33,
+      "direction": 2.3102020310618125,
+      "state": {},
+      "x_position": 200.0,
+      "y_position": 190.0
+    },
+    {
+      "ID": 34,
+      "direction": 0.49874875184744494,
+      "state": {},
+      "x_position": -57.0,
+      "y_position": 86.0
+    },
+    {
+      "ID": 35,
+      "direction": 4.1065055179008034,
+      "state": {},
+      "x_position": -397.0,
+      "y_position": 109.0
+    },
+    {
+      "ID": 36,
+      "direction": 0.97733217275648598,
+      "state": {},
+      "x_position": 372.0,
+      "y_position": -121.0
+    },
+    {
+      "ID": 37,
+      "direction": 1.6639594441669687,
+      "state": {},
+      "x_position": 322.35374016567539,
+      "y_position": -45.601696179213988
+    },
+    {
+      "ID": 38,
+      "direction": 0.32474038095748703,
+      "state": {},
+      "x_position": 153.5900165893423,
+      "y_position": -60.192608877742103
+    },
+    {
+      "ID": 39,
+      "direction": 1.8317812866431862,
+      "state": {},
+      "x_position": -394.0,
+      "y_position": -177.0
+    }
+  ],
+  "ticks": 356
+}

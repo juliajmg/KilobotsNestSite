@@ -4,29 +4,29 @@
       "ID": 0,
       "direction": 3.0728318524207108,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 5,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
-      "x_position": -180.0,
-      "y_position": -204.0
+      "x_position": -193.88498791006998,
+      "y_position": -206.66364083277927
     },
     {
       "ID": 1,
       "direction": 5.947530761523331,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 4,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
-      "x_position": -142.0,
-      "y_position": -157.0
+      "x_position": -136.36488741227387,
+      "y_position": -159.67478288394403
     },
     {
       "ID": 2,
@@ -37,7 +37,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -185.17561548829323,
       "y_position": -316.25707659024857
@@ -51,7 +51,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -188.0,
       "y_position": -21.0
@@ -60,12 +60,12 @@
       "ID": 4,
       "direction": 5.5458921970592678,
       "state": {
-        "BotsSeen": 0,
+        "BotsSeen": 1,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 177.0,
       "y_position": -11.0
@@ -79,7 +79,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 305.33713488786816,
       "y_position": 258.01880696664921
@@ -93,7 +93,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -272.76113161673567,
       "y_position": -292.57059927605377
@@ -107,7 +107,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -68.0,
       "y_position": -377.0
@@ -121,7 +121,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 124.0,
       "y_position": -133.0
@@ -135,7 +135,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 276.19089231453847,
       "y_position": -288.7456974372945
@@ -144,12 +144,12 @@
       "ID": 10,
       "direction": 0.7836159312631833,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 5,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -204.15889360201305,
       "y_position": -148.3906723224157
@@ -163,7 +163,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -53.0,
       "y_position": -343.0
@@ -172,12 +172,12 @@
       "ID": 12,
       "direction": 5.0537633718840542,
       "state": {
-        "BotsSeen": 2,
+        "BotsSeen": 3,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -89.0,
       "y_position": -162.0
@@ -191,7 +191,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -179.53036186294861,
       "y_position": -356.14708437919518
@@ -205,7 +205,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -36.0,
       "y_position": 179.0
@@ -219,7 +219,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -309.47147676274011,
       "y_position": -252.39117052175388
@@ -233,7 +233,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -79.951805148671326,
       "y_position": -285.70331663340903
@@ -242,15 +242,15 @@
       "ID": 17,
       "direction": 0.018912353306856207,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 5,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 1100
       },
-      "x_position": 102.0,
-      "y_position": 48.0
+      "x_position": -159.51992315203069,
+      "y_position": -211.24337970892464
     },
     {
       "ID": 18,
@@ -261,7 +261,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 325.0,
       "y_position": 124.0
@@ -275,7 +275,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -3.0,
       "y_position": 86.0
@@ -289,7 +289,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 166.44172610429939,
       "y_position": -173.97553493869452
@@ -303,7 +303,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -358.27513469447894,
       "y_position": 176.38014348958976
@@ -312,12 +312,12 @@
       "ID": 22,
       "direction": 3.2672832043971729,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 4,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -198.01742264609362,
       "y_position": -283.73877670299981
@@ -331,7 +331,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -88.0,
       "y_position": 238.0
@@ -345,7 +345,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -372.94171423534681,
       "y_position": 144.33756800011244
@@ -359,7 +359,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 42.683281572999746,
       "y_position": -278.6583592135002
@@ -373,7 +373,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 363.0,
       "y_position": 40.0
@@ -382,12 +382,12 @@
       "ID": 27,
       "direction": 5.7981440275148071,
       "state": {
-        "BotsSeen": 2,
+        "BotsSeen": 3,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -98.048194851328674,
       "y_position": -256.29668336659097
@@ -401,7 +401,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -183.0,
       "y_position": 20.0
@@ -415,7 +415,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 351.0,
       "y_position": -31.0
@@ -424,12 +424,12 @@
       "ID": 30,
       "direction": 3.0722348882176127,
       "state": {
-        "BotsSeen": 2,
+        "BotsSeen": 3,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 112.0,
       "y_position": 87.0
@@ -443,7 +443,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 23.0,
       "y_position": 124.0
@@ -457,7 +457,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -360.0,
       "y_position": -126.0
@@ -471,7 +471,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 295.79812440670429,
       "y_position": -260.17306309204986
@@ -480,12 +480,12 @@
       "ID": 34,
       "direction": 3.1351535669988477,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 5,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -274.77814977315637,
       "y_position": -248.60870295125085
@@ -499,7 +499,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -308.0,
       "y_position": 183.0
@@ -513,7 +513,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 106.0,
       "y_position": -301.0
@@ -527,7 +527,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -165.0,
       "y_position": 354.0
@@ -541,7 +541,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 338.74038419654369,
       "y_position": -212.52478898906426
@@ -555,7 +555,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -181.0,
       "y_position": 75.0
@@ -564,12 +564,12 @@
       "ID": 40,
       "direction": 2.3049411435818752,
       "state": {
-        "BotsSeen": 2,
+        "BotsSeen": 3,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 111.0,
       "y_position": 139.0
@@ -578,15 +578,15 @@
       "ID": 41,
       "direction": 4.0852204109478061,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 5,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
-      "x_position": -167.0,
-      "y_position": -238.0
+      "x_position": -168.03663563912397,
+      "y_position": -245.92826125319198
     },
     {
       "ID": 42,
@@ -597,7 +597,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 37.0,
       "y_position": -197.0
@@ -611,7 +611,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 330.0,
       "y_position": 50.0
@@ -625,7 +625,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 11.31671842700025,
       "y_position": -294.3416407864998
@@ -639,7 +639,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 252.0,
       "y_position": 151.0
@@ -653,7 +653,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": 162.55827389570061,
       "y_position": -139.02446506130548
@@ -667,7 +667,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -286.0,
       "y_position": 93.0
@@ -681,7 +681,7 @@
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -210.75610007298999,
       "y_position": -338.83299016476241
@@ -690,16 +690,16 @@
       "ID": 49,
       "direction": 5.0928574115534406,
       "state": {
-        "BotsSeen": 2,
+        "BotsSeen": 3,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 2000
+        "time": 0
       },
       "x_position": -226.84110639798695,
       "y_position": -175.6093276775843
     }
   ],
-  "ticks": 2761
+  "ticks": 1134
 }

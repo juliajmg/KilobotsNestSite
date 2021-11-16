@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=time_delay.c json_state.c
+SOURCES=trasmit_clock.c json_state.c
 
 #name of the executable file
-EXECUTABLE=time_delay_dt=100
+EXECUTABLE=transmit_clock_dt=100
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

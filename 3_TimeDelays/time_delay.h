@@ -53,6 +53,7 @@ typedef struct {
   uint8_t  beacon_reset;
   uint8_t  reset;
   uint8_t bot_reset;
+
   uint32_t signals_total;
   uint32_t signals_one;
   uint32_t f1;
