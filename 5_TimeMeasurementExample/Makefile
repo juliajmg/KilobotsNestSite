@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=unique_bots_seen.c json_state.c
+SOURCES=time_measure_example.c
 
 #name of the executable fe
-EXECUTABLE=unique_bots_seen_40_turn180
+EXECUTABLE=time_measure_example
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

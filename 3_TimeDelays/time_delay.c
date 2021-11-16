@@ -67,6 +67,7 @@ void update_color()
 }
 
 void random_walk(){
+  uint8_t rand;
   switch(mydata->current_motion_type) {
     case LEFT:
     case RIGHT:
@@ -89,7 +90,16 @@ void random_walk(){
         set_motion(RIGHT);
         //set_color(RGB(1,0,0));
       }
-      mydata->turning_ticks = rand_soft()%mydata->max_turning_ticks + 1;
+      //mydata->turning_ticks = rand_soft()%mydata->max_turning_ticks + 1;
+
+
+      rand = rand_soft() % 2;
+      if(rand == 0){
+        mydata->turning_ticks = 90;
+      }
+      if(rand == 1){
+        mydata->turning_ticks = 180;
+      }
     }
     break;
     case STOP:
@@ -107,6 +117,7 @@ void update_message() {
   mydata->transmit_msg.data[1] = mydata->my_id;
   mydata->transmit_msg.data[2] = mydata->dancing;
   mydata->transmit_msg.data[3] = mydata->quality_time;
+  mydata->transmit_msg.data[4] = mydata->reset;
   mydata->transmit_msg.crc = message_crc(&mydata->transmit_msg);
 }
 
@@ -119,6 +130,7 @@ void message_rx(message_t *message, distance_measurement_t *d) {
   mydata->bot_id = message->data[1];
   mydata->bot_dsite = message->data[2];
   mydata->bot_qtime = message->data[3];
+  mydata->bot_reset = message->data[4];
 
 
 
@@ -234,22 +246,46 @@ void setup()
   mydata->max_straight_ticks = 120;
   mydata->last_motion_ticks = rand_soft() % mydata->max_straight_ticks + 1;
 
+  mydata->reset = OFF;
+  mydata->bot_reset = OFF;
   set_motion(STOP);
 
 }
 
 void loop()
 {
-  //if(kilo_ticks == 100){
-  if(kilo_ticks >= (mydata->t + (DELTA_T))){
-    if(mydata->cycle == 0){
-      mydata->cycle = 1;
-    }
-    else {
-      mydata->cycle = 0;
-    }
-    mydata->t = kilo_ticks;
 
+  if(kilo_uid == 17){
+    if(kilo_ticks >= (mydata->t + (DELTA_T))){
+      mydata->reset = ON;
+      if(mydata->cycle == 0){
+        mydata->cycle = 1;
+      }
+      else {
+        mydata->cycle = 0;
+      }
+      if(kilo_ticks >= (mydata->t + DELTA_T + 50)){
+      mydata->t = kilo_ticks;
+      mydata->reset = OFF;
+    }
+
+    }
+    /*else {
+      mydata->reset = OFF;
+    }*/
+  } else {
+    if(mydata->bot_reset == ON){
+
+    //if((kilo_ticks >= (mydata->t + (DELTA_T))) | ((mydata->bot_id == 17) & (mydata->bot_reset == ON))){
+      if(mydata->cycle == 0){
+        mydata->cycle = 1;
+      }
+      else {
+        mydata->cycle = 0;
+      }
+
+      //mydata->t = kilo_ticks;
+    }
   }
 
   if(mydata->cycle == 0){
@@ -270,45 +306,45 @@ void loop()
 
   // NEW: Different time units to calculate probabilities and dance duration.
 
-/*
+  /*
   if(mydata->dancing == NO_DANCE){
-    if(kilo_ticks > mydata->t + (DELTA_T - 1)){
-      //mydata->t = kilo_ticks;
-      decide_dance();
-      reset_parameters();
-    }
-  }
+  if(kilo_ticks > mydata->t + (DELTA_T - 1)){
+  //mydata->t = kilo_ticks;
+  decide_dance();
+  reset_parameters();
+}
+}
 
-  if(mydata->dancing == NEST_ONE) {
-    //mydata->cycle = 0;
-    //mydata->d = mydata->d-1;
-    //set_color(RGB(1,0,0));
-  }
+if(mydata->dancing == NEST_ONE) {
+//mydata->cycle = 0;
+//mydata->d = mydata->d-1;
+//set_color(RGB(1,0,0));
+}
 
-  // If I am dancing for a site keep dancing
-  if(mydata->dancing == NEST_TWO) {
-    //mydata->d = mydata->N;
-    //mydata->cycle = 1;
-    //set_color(RGB(0,1,0));
-  }
+// If I am dancing for a site keep dancing
+if(mydata->dancing == NEST_TWO) {
+//mydata->d = mydata->N;
+//mydata->cycle = 1;
+//set_color(RGB(0,1,0));
+}
 
-  if(mydata->dancing == NO_DANCE){
-    //set_color(RGB(0,0,1));
-    //mydata->cycle = 2;
-    mydata->d = 0;
-  }
-  // If I danced "long enough", stop dancing
-  if((mydata->dancing != NO_DANCE) && (kilo_ticks > mydata->t + (mydata->d - 2))){
-    mydata->dancing = NO_DANCE;
-    mydata->i_was_dancing = 1;
-    //mydata->dance_time = kilo_ticks;
-    reset_parameters();
+if(mydata->dancing == NO_DANCE){
+//set_color(RGB(0,0,1));
+//mydata->cycle = 2;
+mydata->d = 0;
+}
+// If I danced "long enough", stop dancing
+if((mydata->dancing != NO_DANCE) && (kilo_ticks > mydata->t + (mydata->d - 2))){
+mydata->dancing = NO_DANCE;
+mydata->i_was_dancing = 1;
+//mydata->dance_time = kilo_ticks;
+reset_parameters();
 
-  }
+}
 
-  //mydata->t = mydata->t + 1;
+//mydata->t = mydata->t + 1;
 
-  update_message();
+update_message();
 */
 }
 

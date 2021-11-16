@@ -63,7 +63,7 @@ void set_motion(motion_t new_motion)
 
 
 void random_walk(){
-  uint8_t rand;
+
   switch(mydata->current_motion_type) {
     case LEFT:
     case RIGHT:
@@ -86,14 +86,17 @@ void random_walk(){
         set_motion(RIGHT);
         //set_color(RGB(1,0,0));
       }
-      mydata->turning_ticks = rand_soft()%mydata->max_turning_ticks + 1;
-      /*rand = rand_soft() % 2;
+
+        //mydata->turning_ticks = rand_soft()%mydata->max_turning_ticks + 1;
+
+
+      rand = rand_soft() % 2;
       if(rand == 0){
         mydata->turning_ticks = 90;
       }
       if(rand == 1){
         mydata->turning_ticks = 180;
-      }*/
+      }
 
     }
     break;
@@ -145,6 +148,7 @@ void setup()
   mydata->max_straight_ticks = 120;
   mydata->current_motion_type = STOP;
 
+  mydata->big_turn = kilo_ticks;
   set_motion(FORWARD);
   //mydata->last_motion_ticks = rand_soft() % mydata->max_straight_ticks + 1;
   mydata->bots_seen = 0;
@@ -183,13 +187,13 @@ void loop()
       if((mydata->bots_seen >= 1) & (mydata->bots_seen < 10)){
         set_color(RGB(1,0,0));
       }
-      if((mydata->bots_seen >= 10) & (mydata->bots_seen < 15)){
+      if((mydata->bots_seen >= 10) & (mydata->bots_seen < 20)){
         set_color(RGB(0,1,0));
       }
-      if((mydata->bots_seen >= 15) & (mydata->bots_seen < 20)){
+      if((mydata->bots_seen >= 20) & (mydata->bots_seen < 30)){
         set_color(RGB(0,0,1));
       }
-      if(mydata->bots_seen > 20){
+      if(mydata->bots_seen > 30){
         set_color(RGB(1,1,1));
       }
 

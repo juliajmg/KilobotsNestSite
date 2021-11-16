@@ -56,10 +56,27 @@ script: Unique_bots_seen_Deltat.c
 
 ### 3. Desincronización temporal entre bots
 
-### 4. Random walk tests 
+### 4. Random walk tests
 
 script: random_motion.hex
 
 Los vídeos pueden ser vistos aquí:
 
 https://mega.nz/folder/3GgwDIAD#aVKxpuHiPXFEw4ke6cx-Jg
+
+## NOTAS 11 DE NOVIEMBRE 2021
+
+1. Problema de sincronización
+- Medir a qué altura los kilobots reciben el infrarrojo de otro kilobot: a qué distancia habría que colgar.
+- Para no acumular desfase, probar si hay un desfase constante en los procesadores, y si es así.
+
+
+
+# Próxima reunión:
+1. Probar con el material de allá. 
+1. Explicar cómo estoy midiendo los Delta t.
+2. Ver el efecto de un kilobot que resetee el reloj para todos.
+3. Ver el efecto que cuatro kilobots en cuadrantes de medio.
+4. Cuántos bots ven en Delta_t, para varios Delta_t.
+5. Arena pequeña: 20 cm de radio. Hacer vídeos con esta arena y condición PRW-angulos discretos.
+6. Modelo de inmóviles con kilombo: mismos vecinos.

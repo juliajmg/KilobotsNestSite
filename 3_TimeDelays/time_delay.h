@@ -9,8 +9,10 @@
 #define PRIORI_TWO 10
 #define QUALITY_ONE 1
 #define QUALITY_TWO 2
-#define DELTA_T 1000
+#define DELTA_T 100
 #define IND_SEED 21
+#define OFF 0
+#define ON 1
 // declare motion variable type
 typedef enum {
     STOP,
@@ -48,7 +50,9 @@ typedef struct {
   uint32_t bot_id;
   uint32_t bot_dsite; /* Variable to save dancing status of bee */
   uint32_t bot_qtime; /* Copy time of dancing of bot */
-
+  uint8_t  beacon_reset;
+  uint8_t  reset;
+  uint8_t bot_reset;
   uint32_t signals_total;
   uint32_t signals_one;
   uint32_t f1;

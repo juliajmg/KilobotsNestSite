@@ -7,7 +7,7 @@
 SOURCES=time_delay.c json_state.c
 
 #name of the executable file
-EXECUTABLE=time_delay_dt=1000
+EXECUTABLE=time_delay_dt=100
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

@@ -1,0 +1,365 @@
+{
+  "bot_states": [
+    {
+      "ID": 0,
+      "direction": 25.189852530392049,
+      "state": {
+        "BotsSeen": 240
+      },
+      "x_position": -640.49405014111028,
+      "y_position": -342.15152184209541
+    },
+    {
+      "ID": 1,
+      "direction": 1.1474354593840295,
+      "state": {
+        "BotsSeen": 48
+      },
+      "x_position": 647.26547160911537,
+      "y_position": -63.578703733348874
+    },
+    {
+      "ID": 2,
+      "direction": 1.9772096335061717,
+      "state": {
+        "BotsSeen": 144
+      },
+      "x_position": 122.01682746372596,
+      "y_position": -493.92376350213954
+    },
+    {
+      "ID": 3,
+      "direction": 11.833370410034794,
+      "state": {
+        "BotsSeen": 208
+      },
+      "x_position": 164.11270188688266,
+      "y_position": -641.73456999565258
+    },
+    {
+      "ID": 4,
+      "direction": 8.6522083971364712,
+      "state": {
+        "BotsSeen": 64
+      },
+      "x_position": 334.1778476302718,
+      "y_position": 512.09206895950524
+    },
+    {
+      "ID": 5,
+      "direction": -4.5492976142051056,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": 538.7191001996041,
+      "y_position": 1321.4814315241822
+    },
+    {
+      "ID": 6,
+      "direction": -9.3188904151032883,
+      "state": {
+        "BotsSeen": 16
+      },
+      "x_position": 350.64278415828142,
+      "y_position": -506.23275283097144
+    },
+    {
+      "ID": 7,
+      "direction": -2.5576357135154772,
+      "state": {
+        "BotsSeen": 64
+      },
+      "x_position": 361.72972604826992,
+      "y_position": 447.53149533674798
+    },
+    {
+      "ID": 8,
+      "direction": 4.3359413190895308,
+      "state": {
+        "BotsSeen": 240
+      },
+      "x_position": -54.37929531851352,
+      "y_position": 144.12027937778223
+    },
+    {
+      "ID": 9,
+      "direction": -11.881664998978206,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": -1088.1308478174451,
+      "y_position": -88.236969937356037
+    },
+    {
+      "ID": 10,
+      "direction": -2.868147121253398,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": -1256.4104761299504,
+      "y_position": 92.867610029156822
+    },
+    {
+      "ID": 11,
+      "direction": -8.1862874977293743,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": -60.671219278259436,
+      "y_position": 484.78340513733832
+    },
+    {
+      "ID": 12,
+      "direction": -10.574558692395819,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": 352.38008700694996,
+      "y_position": 198.59928851222378
+    },
+    {
+      "ID": 13,
+      "direction": -7.6681657586830791,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": -1050.3033892069693,
+      "y_position": 109.04345505519612
+    },
+    {
+      "ID": 14,
+      "direction": -16.06031681672124,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": 769.21555128198008,
+      "y_position": 124.56474169679078
+    },
+    {
+      "ID": 15,
+      "direction": 28.834295589468351,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": 381.14877832009302,
+      "y_position": 103.79223421149749
+    },
+    {
+      "ID": 16,
+      "direction": 17.269271993635158,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": -959.1223253213974,
+      "y_position": -68.162405937348566
+    },
+    {
+      "ID": 17,
+      "direction": -14.269671793633236,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": -198.03665608880826,
+      "y_position": -58.972319147912238
+    },
+    {
+      "ID": 18,
+      "direction": 34.748381270007208,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": 176.76777426942101,
+      "y_position": -1525.5112810018911
+    },
+    {
+      "ID": 19,
+      "direction": -7.1083862667479707,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": 168.43684350455442,
+      "y_position": 24.294962374148177
+    },
+    {
+      "ID": 20,
+      "direction": -22.028579046776542,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": 488.16000089486522,
+      "y_position": -380.8799455824834
+    },
+    {
+      "ID": 21,
+      "direction": 15.366598268383912,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": 122.58644388503319,
+      "y_position": -881.39107695602286
+    },
+    {
+      "ID": 22,
+      "direction": 17.826815495259005,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": -858.91201117569744,
+      "y_position": -914.40280821435465
+    },
+    {
+      "ID": 23,
+      "direction": 2.9339374575097557,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": -570.62592037224579,
+      "y_position": -239.71833827070475
+    },
+    {
+      "ID": 24,
+      "direction": 1.1138121345099687,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": 743.78072041302084,
+      "y_position": 68.451133179645723
+    },
+    {
+      "ID": 25,
+      "direction": -12.863894254895076,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": -181.43548310548545,
+      "y_position": 635.99649227696409
+    },
+    {
+      "ID": 26,
+      "direction": 16.505002685836466,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": -824.82558910627574,
+      "y_position": -1027.422663713696
+    },
+    {
+      "ID": 27,
+      "direction": 8.0338834366656844,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": -737.25617370366649,
+      "y_position": 450.19725693133125
+    },
+    {
+      "ID": 28,
+      "direction": -19.373978394137261,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": -103.46499498541556,
+      "y_position": -597.51018577078969
+    },
+    {
+      "ID": 29,
+      "direction": 21.007036732848288,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": 110.173026302433,
+      "y_position": -270.12752129081514
+    },
+    {
+      "ID": 30,
+      "direction": -0.28945190420883909,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": -76.663324883236555,
+      "y_position": 176.90177470514669
+    },
+    {
+      "ID": 31,
+      "direction": 5.3111858843401718,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": -343.1933773564437,
+      "y_position": 479.86397141986595
+    },
+    {
+      "ID": 32,
+      "direction": 16.705530149071148,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": -19.520352499596218,
+      "y_position": -336.58808394201571
+    },
+    {
+      "ID": 33,
+      "direction": 14.977104211981629,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": -455.86882905224206,
+      "y_position": 655.85927213053105
+    },
+    {
+      "ID": 34,
+      "direction": 9.6135566703927609,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": -369.95109555948045,
+      "y_position": 448.22212309589526
+    },
+    {
+      "ID": 35,
+      "direction": 6.3684523359221341,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": -446.26973960818907,
+      "y_position": 730.77054405717161
+    },
+    {
+      "ID": 36,
+      "direction": 17.347125070585431,
+      "state": {
+        "BotsSeen": 224
+      },
+      "x_position": 542.19325106292001,
+      "y_position": -735.5711299585704
+    },
+    {
+      "ID": 37,
+      "direction": -11.438576938741999,
+      "state": {
+        "BotsSeen": 32
+      },
+      "x_position": 599.41834907601469,
+      "y_position": -107.56881300577723
+    },
+    {
+      "ID": 38,
+      "direction": -7.2988581538551731,
+      "state": {
+        "BotsSeen": 96
+      },
+      "x_position": 348.53500801419113,
+      "y_position": -129.9622979028847
+    },
+    {
+      "ID": 39,
+      "direction": 1.0275335291244814,
+      "state": {
+        "BotsSeen": 160
+      },
+      "x_position": 520.4348401017935,
+      "y_position": -476.76990095252421
+    }
+  ],
+  "ticks": 11898
+}

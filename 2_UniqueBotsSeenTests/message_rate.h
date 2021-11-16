@@ -1,9 +1,9 @@
 #define N 50
 #define DELTAT 1000
 #define IND_SEED 30
-#define MIN 5
-#define MID 10
-#define MAX 15
+#define MIN 10
+#define MID 20
+#define MAX 30
 
 
 // declare motion variable type
@@ -26,6 +26,7 @@ typedef struct {
   uint32_t max_straight_ticks;
   motion_t current_motion_type;
 
+  uint32_t big_turn;
   // Message reception and transimition variables
   message_t transmit_msg;
   uint8_t new_message;
