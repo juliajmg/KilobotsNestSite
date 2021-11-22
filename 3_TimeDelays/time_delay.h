@@ -13,6 +13,12 @@
 #define IND_SEED 21
 #define OFF 0
 #define ON 1
+
+#define BEACON_1 17
+#define BEACON_2 18
+#define BEACON_3 20
+#define BEACON_4 31
+
 // declare motion variable type
 typedef enum {
     STOP,
@@ -53,6 +59,7 @@ typedef struct {
   uint8_t  beacon_reset;
   uint8_t  reset;
   uint8_t bot_reset;
+  uint8_t beacon;
 
   uint32_t signals_total;
   uint32_t signals_one;
