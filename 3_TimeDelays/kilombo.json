@@ -5,7 +5,7 @@
     "formation" : "random",
     "timeStep" : 0.0322579,
     "simulationTime" : 1000,
-    "commsRadius" : 150,
+    "commsRadius" : 100,
     "showComms" : 0,
     "showCommsRadius" : 1,
     "distributePercent" : 1,

@@ -2,447 +2,447 @@
   "bot_states": [
     {
       "ID": 0,
-      "direction": 3.0728318524207108,
+      "direction": -8.8516470572581785,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
+        "BotsSeen": 157882997,
+        "Dance time": 2638276573,
         "Dancing": 0,
         "bots1": 0,
-        "bots2": 0,
+        "bots2": 2638276551,
         "time": 0
       },
-      "x_position": 110.70467523270362,
-      "y_position": -103.21003715359127
+      "x_position": -27.011248324506138,
+      "y_position": -30.939427037260387
     },
     {
       "ID": 1,
-      "direction": 5.947530761523331,
+      "direction": -6.2978618865180671,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 158.0,
-      "y_position": 143.0
+      "x_position": 142.00960168881636,
+      "y_position": 140.0814606163363
     },
     {
       "ID": 2,
-      "direction": 4.6621675878906794,
+      "direction": 8.2428893001455332,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 4294967295,
         "Dance time": 0,
-        "Dancing": 0,
+        "Dancing": 4294917888,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -120.0,
-      "y_position": 148.0
+      "x_position": 25.111945086682621,
+      "y_position": 153.34286539674426
     },
     {
       "ID": 3,
-      "direction": 0.024790513218668056,
+      "direction": 0.024790513218667848,
       "state": {
-        "BotsSeen": 8,
-        "Dance time": 0,
+        "BotsSeen": 4294967295,
+        "Dance time": 3774857727,
         "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "bots1": 4294967295,
+        "bots2": 4294967295,
         "time": 0
       },
-      "x_position": 112.0,
-      "y_position": 79.0
+      "x_position": 74.381123464470662,
+      "y_position": 95.993645785914765
     },
     {
       "ID": 4,
-      "direction": 5.5458921970592678,
+      "direction": 11.66014342270182,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
+        "BotsSeen": 0,
+        "Dance time": 50828033,
+        "Dancing": 33985025,
         "bots1": 0,
-        "bots2": 0,
+        "bots2": 257,
         "time": 0
       },
-      "x_position": 77.792623989104598,
-      "y_position": 289.60971076084968
+      "x_position": -108.25909360021438,
+      "y_position": 73.340705696476846
     },
     {
       "ID": 5,
-      "direction": 1.4828300562009238,
+      "direction": -12.282680299872975,
       "state": {
-        "BotsSeen": 6,
-        "Dance time": 0,
-        "Dancing": 0,
+        "BotsSeen": 514,
+        "Dance time": 33718785,
+        "Dancing": 17006849,
         "bots1": 0,
-        "bots2": 0,
+        "bots2": 16843009,
         "time": 0
       },
-      "x_position": 42.0,
-      "y_position": 189.0
+      "x_position": 42.612817612741914,
+      "y_position": 81.420015061044765
     },
     {
       "ID": 6,
-      "direction": 2.4248212178452984,
+      "direction": -3.6387594175296778,
       "state": {
-        "BotsSeen": 4,
-        "Dance time": 0,
-        "Dancing": 0,
+        "BotsSeen": 40,
+        "Dance time": 2761,
+        "Dancing": 40,
         "bots1": 0,
-        "bots2": 0,
+        "bots2": 41,
         "time": 0
       },
-      "x_position": -258.0,
-      "y_position": 116.0
+      "x_position": 40.998971761939202,
+      "y_position": 184.8641284828602
     },
     {
       "ID": 7,
-      "direction": 3.2058041306326936,
+      "direction": -1.3545489934654755,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 787459,
+        "Dance time": 85,
+        "Dancing": 2300,
+        "bots1": 105,
+        "bots2": 697,
         "time": 0
       },
-      "x_position": -168.0,
-      "y_position": -277.0
+      "x_position": -74.554601007558105,
+      "y_position": -134.98959902521614
     },
     {
       "ID": 8,
-      "direction": 3.9470048470862151,
+      "direction": 14.655389590338627,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 72,
+        "Dance time": 72,
+        "Dancing": 787459,
+        "bots1": 689,
+        "bots2": 787459,
         "time": 0
       },
-      "x_position": 225.43591631723552,
-      "y_position": -236.73338242481225
+      "x_position": 180.99758386508873,
+      "y_position": 19.826567731599066
     },
     {
       "ID": 9,
-      "direction": 2.6200305720470243,
+      "direction": -15.756503498392629,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 118,
+        "Dance time": 118,
+        "Dancing": 1442326,
+        "bots1": 86,
+        "bots2": 1442326,
         "time": 0
       },
-      "x_position": 61.284066240493928,
-      "y_position": -269.0079763938428
+      "x_position": 28.327088689435598,
+      "y_position": -180.93605627192849
     },
     {
       "ID": 10,
-      "direction": 0.7836159312631833,
+      "direction": 6.9316475504177646,
       "state": {
-        "BotsSeen": 6,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 269024775,
+        "Dance time": 65475,
+        "Dancing": 65475,
+        "bots1": 12,
+        "bots2": 65477,
         "time": 0
       },
-      "x_position": 95.841106397986863,
-      "y_position": 151.6093276775843
+      "x_position": 89.957231235924553,
+      "y_position": 139.31911785406496
     },
     {
       "ID": 11,
-      "direction": 5.6048939068315926,
+      "direction": 10.199027424441494,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 65793,
+        "Dance time": 65301,
+        "Dancing": 131585,
+        "bots1": 65360,
+        "bots2": 65362,
         "time": 0
       },
-      "x_position": -153.0,
-      "y_position": -243.0
+      "x_position": -139.88280777011235,
+      "y_position": 51.934121853008449
     },
     {
       "ID": 12,
-      "direction": 5.0537633718840542,
+      "direction": 1.3041396920699944,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 0,
+        "Dance time": 65793,
+        "Dancing": 269025114,
+        "bots1": 65793,
+        "bots2": 65793,
         "time": 0
       },
-      "x_position": 211.0,
-      "y_position": -62.0
+      "x_position": 194.71242900890161,
+      "y_position": -45.152734138755925
     },
     {
       "ID": 13,
-      "direction": 5.4102648512702061,
+      "direction": 2.8936255346382476,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 269025110,
         "Dance time": 0,
-        "Dancing": 0,
+        "Dancing": 65793,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -103.0,
-      "y_position": 102.0
+      "x_position": 73.325048546078165,
+      "y_position": 171.15839838895184
     },
     {
       "ID": 14,
-      "direction": 4.4875495663720404,
+      "direction": 4.08218484422998,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 264.0,
-      "y_position": -121.0
+      "x_position": 12.228020368869569,
+      "y_position": 0.99282918551311816
     },
     {
       "ID": 15,
-      "direction": 1.014283002329712,
+      "direction": -0.50583470570300793,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
+        "BotsSeen": 4293918720,
+        "Dance time": 1073741823,
         "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "bots1": 1073741823,
+        "bots2": 1073741823,
         "time": 0
       },
-      "x_position": -287.0,
-      "y_position": -27.0
+      "x_position": -199.41821302018039,
+      "y_position": 1.9589358233354113
     },
     {
       "ID": 16,
-      "direction": 1.3792846677370156,
+      "direction": 14.773210695180572,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 16645629,
+        "Dance time": 11842740,
+        "Dancing": 11119017,
+        "bots1": 16777215,
+        "bots2": 16645629,
         "time": 0
       },
-      "x_position": 22.430285694040375,
-      "y_position": 16.586716002550148
+      "x_position": 113.54463654235205,
+      "y_position": 112.9255994586142
     },
     {
       "ID": 17,
       "direction": 0.018912353306856207,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
-        "time": 0
+        "time": 2800
       },
-      "x_position": -198.0,
-      "y_position": 148.0
+      "x_position": -159.55344839094505,
+      "y_position": 119.26217354474647
     },
     {
       "ID": 18,
       "direction": 5.3457350432532564,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "bots1": 4605510,
+        "bots2": 16777215,
         "time": 0
       },
-      "x_position": -173.78983346493288,
-      "y_position": -174.4076756117538
+      "x_position": -140.45062084954614,
+      "y_position": -141.25319582582938
     },
     {
       "ID": 19,
-      "direction": 1.6065875889817722,
+      "direction": 4.1401171023696497,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 97.0,
-      "y_position": 186.0
+      "x_position": 137.69253254947714,
+      "y_position": 89.083519258241822
     },
     {
       "ID": 20,
       "direction": 1.6023434880836487,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 266.0,
-      "y_position": -270.0
+      "x_position": 139.67414191771445,
+      "y_position": -141.77450495407129
     },
     {
       "ID": 21,
-      "direction": 1.750030521944268,
+      "direction": 4.0808776742611146,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 16757248,
+        "Dance time": 16757248,
+        "Dancing": 16757248,
+        "bots1": 16757248,
+        "bots2": 16757248,
         "time": 0
       },
-      "x_position": 138.57617829421105,
-      "y_position": -127.99174758994378
+      "x_position": 70.157815726837981,
+      "y_position": -145.57858949044714
     },
     {
       "ID": 22,
-      "direction": 3.2672832043971729,
+      "direction": 2.7605773017195974,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 93.839748528310764,
-      "y_position": -208.2264990188738
+      "x_position": 61.431144403305126,
+      "y_position": -189.69877557220687
     },
     {
       "ID": 23,
-      "direction": 4.3204696223188703,
+      "direction": 18.069089781636773,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 15724527,
         "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
+        "Dancing": 16757248,
+        "bots1": 1052688,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 12.0,
-      "y_position": -262.0
+      "x_position": -42.936479486711413,
+      "y_position": -172.89761037547663
     },
     {
       "ID": 24,
-      "direction": 1.3194514587351245,
+      "direction": 2.8395691667678511,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 16757248,
         "Dance time": 0,
         "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "bots1": 16757248,
+        "bots2": 16757248,
         "time": 0
       },
-      "x_position": -295.0,
-      "y_position": 55.0
+      "x_position": -118.96887419375453,
+      "y_position": 3.4150416087900535
     },
     {
       "ID": 25,
-      "direction": 3.4603513146646367,
+      "direction": 12.648618349884428,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -260.0,
-      "y_position": -180.0
+      "x_position": -157.289300227181,
+      "y_position": 21.296280352614996
     },
     {
       "ID": 26,
-      "direction": 0.085424257326059697,
+      "direction": -18.291109813113707,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 16757248,
+        "Dance time": 16757248,
+        "Dancing": 16757248,
+        "bots1": 16757248,
+        "bots2": 16757248,
         "time": 0
       },
-      "x_position": 263.0,
-      "y_position": 140.0
+      "x_position": 168.27729324624869,
+      "y_position": 68.290271390545826
     },
     {
       "ID": 27,
-      "direction": 5.7981440275148071,
+      "direction": 21.117552485133356,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 14671839,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 3.0,
-      "y_position": 242.0
+      "x_position": -27.900738222234708,
+      "y_position": 109.57497654792314
     },
     {
       "ID": 28,
-      "direction": 0.826736717314148,
+      "direction": -5.3044047050845062,
       "state": {
-        "BotsSeen": 7,
+        "BotsSeen": 0,
         "Dance time": 0,
-        "Dancing": 0,
+        "Dancing": 16777215,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 117.0,
-      "y_position": 120.0
+      "x_position": 175.99916181409824,
+      "y_position": -93.604099910037391
     },
     {
       "ID": 29,
-      "direction": 6.0086210969924432,
+      "direction": 19.757241256310436,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 50.207376010895402,
-      "y_position": 268.39028923915032
+      "x_position": 37.164913463920648,
+      "y_position": 116.73334076011972
     },
     {
       "ID": 30,
-      "direction": 3.0722348882176127,
+      "direction": -1.5387888261483145,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 10.846725246115881,
-      "y_position": -16.827439245238612
+      "x_position": -41.429153605852868,
+      "y_position": -138.92546410180492
     },
     {
       "ID": 31,
       "direction": 1.3735953442167117,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 0,
+        "Dance time": 16757248,
+        "Dancing": 16757248,
+        "bots1": 13684944,
+        "bots2": 1052688,
         "time": 0
       },
       "x_position": -77.0,
@@ -450,256 +450,256 @@
     },
     {
       "ID": 32,
-      "direction": 0.57704829384051304,
+      "direction": 4.900938663355821,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 16757248,
         "Dance time": 0,
         "Dancing": 0,
-        "bots1": 0,
+        "bots1": 16757248,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 140.0,
-      "y_position": -26.0
+      "x_position": 68.804619294471834,
+      "y_position": -67.468351287216109
     },
     {
       "ID": 33,
-      "direction": 5.3447609504726685,
+      "direction": 6.8986590520172335,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -15.357661493710351,
-      "y_position": 31.477156918943287
+      "x_position": -11.149026981041228,
+      "y_position": -62.374395446586504
     },
     {
       "ID": 34,
-      "direction": 3.1351535669988477,
+      "direction": 0.078027954177480208,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 16757248,
+        "Dance time": 16757248,
+        "Dancing": 16757248,
+        "bots1": 16757248,
+        "bots2": 16757248,
         "time": 0
       },
-      "x_position": 12.080650553554095,
-      "y_position": 52.763566323745181
+      "x_position": -75.756775845119165,
+      "y_position": -15.954567021066095
     },
     {
       "ID": 35,
-      "direction": 5.7773034604043918,
+      "direction": 1.1831699427943736,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 16777215,
         "Dance time": 0,
         "Dancing": 0,
-        "bots1": 0,
+        "bots1": 6381921,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 192.0,
-      "y_position": 83.0
+      "x_position": 135.84933722812255,
+      "y_position": 53.387754093713461
     },
     {
       "ID": 36,
-      "direction": 2.1876696980240227,
+      "direction": -0.86945591479734041,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 0,
         "Dance time": 0,
-        "Dancing": 0,
+        "Dancing": 10921638,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -195.21016653506712,
-      "y_position": -202.5923243882462
+      "x_position": -106.58275617781872,
+      "y_position": -149.0909989225614
     },
     {
       "ID": 37,
-      "direction": 1.0742594602699251,
+      "direction": 8.6917381971894407,
       "state": {
-        "BotsSeen": 4,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 16757248,
+        "Dance time": 16757248,
+        "Dancing": 16757248,
+        "bots1": 16757248,
+        "bots2": 16757248,
         "time": 0
       },
-      "x_position": -265.0,
-      "y_position": -146.0
+      "x_position": -163.33433250453723,
+      "y_position": -115.24855103166337
     },
     {
       "ID": 38,
-      "direction": 5.6428767841480356,
+      "direction": 11.757128009790582,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 131586,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -135.0,
-      "y_position": 271.0
+      "x_position": -17.131168048007467,
+      "y_position": 148.61840577375125
     },
     {
       "ID": 39,
-      "direction": 0.9909701270720247,
+      "direction": -0.54603777771661333,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 7237230,
         "Dance time": 0,
-        "Dancing": 0,
+        "Dancing": 13537280,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 123.16025147168924,
-      "y_position": -227.7735009811262
+      "x_position": 8.2692497189899079,
+      "y_position": -33.926357869070429
     },
     {
       "ID": 40,
-      "direction": 2.3049411435818752,
+      "direction": 6.8821844644359738,
       "state": {
-        "BotsSeen": 4,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 5191424,
+        "Dance time": 16777215,
+        "Dancing": 12040119,
+        "bots1": 15837184,
+        "bots2": 16757248,
         "time": 0
       },
-      "x_position": 11.0,
-      "y_position": -161.0
+      "x_position": 151.49086104942066,
+      "y_position": 1.1726336611279329
     },
     {
       "ID": 41,
-      "direction": 4.0852204109478061,
+      "direction": 17.867620963777537,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 15198183,
         "Dance time": 0,
         "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "bots1": 16777215,
+        "bots2": 1513239,
         "time": 0
       },
-      "x_position": -67.0,
-      "y_position": 62.0
+      "x_position": -96.479858486476999,
+      "y_position": 32.156218270957567
     },
     {
       "ID": 42,
-      "direction": 5.6535161543147936,
+      "direction": 4.5387631684241265,
       "state": {
-        "BotsSeen": 6,
-        "Dance time": 0,
-        "Dancing": 0,
+        "BotsSeen": 0,
+        "Dance time": 16757248,
+        "Dancing": 16757248,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 143.71914647308529,
-      "y_position": -92.798215256464943
+      "x_position": 169.40845755221414,
+      "y_position": 102.8824531263333
     },
     {
       "ID": 43,
-      "direction": 5.7804066256408229,
+      "direction": -0.60408774809662102,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
+        "BotsSeen": 0,
+        "Dance time": 16777215,
+        "Dancing": 5921370,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -170.0,
-      "y_position": -50.0
+      "x_position": -91.811197493084208,
+      "y_position": 109.67550033265582
     },
     {
       "ID": 44,
-      "direction": 3.5929709945094825,
+      "direction": 8.1871045121194896,
       "state": {
-        "BotsSeen": 4,
+        "BotsSeen": 58739,
         "Dance time": 0,
         "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "bots1": 65408,
+        "bots2": 65408,
         "time": 0
       },
-      "x_position": -86.0,
-      "y_position": 7.0
+      "x_position": -77.71169670715507,
+      "y_position": 149.73771050015878
     },
     {
       "ID": 45,
-      "direction": 3.5787588272928144,
+      "direction": 9.6592296594236338,
       "state": {
-        "BotsSeen": 3,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": -248.0,
-      "y_position": 251.0
+      "x_position": -154.18581798580303,
+      "y_position": -81.900009719566071
     },
     {
       "ID": 46,
-      "direction": 0.46886786595432273,
+      "direction": -4.5306303737977487,
       "state": {
-        "BotsSeen": 3,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 4342338,
+        "Dance time": 15134,
+        "Dancing": 65408,
+        "bots1": 16053492,
+        "bots2": 4737096,
         "time": 0
       },
-      "x_position": 63.518629893467619,
-      "y_position": -235.01682931408129
+      "x_position": 101.13601989937845,
+      "y_position": -172.21437313767768
     },
     {
       "ID": 47,
-      "direction": 1.9257679449704734,
+      "direction": 4.3241758843109972,
       "state": {
-        "BotsSeen": 5,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
-        "bots2": 0,
+        "bots2": 65408,
         "time": 0
       },
-      "x_position": 212.56408368276448,
-      "y_position": -203.26661757518775
+      "x_position": 5.9452291638024626,
+      "y_position": -93.9150367736313
     },
     {
       "ID": 48,
-      "direction": 1.6851861280235534,
+      "direction": -4.4290650976191808,
       "state": {
-        "BotsSeen": 2,
+        "BotsSeen": 0,
         "Dance time": 0,
         "Dancing": 0,
         "bots1": 0,
         "bots2": 0,
         "time": 0
       },
-      "x_position": 59.197303866038453,
-      "y_position": -302.97519429207586
+      "x_position": 199.55518301547738,
+      "y_position": -10.353161968812699
     },
     {
       "ID": 49,
-      "direction": 5.0928574115534406,
+      "direction": 1.4276847155189767,
       "state": {
-        "BotsSeen": 5,
-        "Dance time": 0,
-        "Dancing": 0,
-        "bots1": 0,
-        "bots2": 0,
+        "BotsSeen": 65408,
+        "Dance time": 65408,
+        "Dancing": 65408,
+        "bots1": 65408,
+        "bots2": 65408,
         "time": 0
       },
-      "x_position": 73.158893602013137,
-      "y_position": 124.39067232241577
+      "x_position": 115.15384415037137,
+      "y_position": 163.26280937688085
     }
   ],
-  "ticks": 29
+  "ticks": 2864
 }
