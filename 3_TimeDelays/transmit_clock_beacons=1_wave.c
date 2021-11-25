@@ -156,7 +156,9 @@ void setup()
   mydata->last_motion_ticks = rand_soft() % mydata->max_straight_ticks + 1;
 
   // Three still down-the-glass bots to cover arena radius
-  if((kilo_uid == 18) | (kilo_uid == 20) | (kilo_uid == 31)){
+  /*if((kilo_uid == 18) | (kilo_uid == 20) | (kilo_uid == 31)){*/
+
+  if(kilo_uid == 17){
     set_motion(STOP);
   } else {
     set_motion(FORWARD);
@@ -168,6 +170,7 @@ void setup()
 
 void loop()
 {
+  random_walk();
   /*If bot is the beacon, reset time every delta t, and add one delta_t cycle to transmitted cycle variable  */
   if(mydata->my_id == BEACON_1){
     if(kilo_ticks >= (mydata->t + (DELTA_T))){

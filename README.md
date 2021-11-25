@@ -73,10 +73,22 @@ https://mega.nz/folder/3GgwDIAD#aVKxpuHiPXFEw4ke6cx-Jg
 
 
 # Próxima reunión:
-1. Probar con el material de allá. 
+1. Probar con el material de allá.
 1. Explicar cómo estoy midiendo los Delta t.
 2. Ver el efecto de un kilobot que resetee el reloj para todos.
 3. Ver el efecto que cuatro kilobots en cuadrantes de medio.
 4. Cuántos bots ven en Delta_t, para varios Delta_t.
 5. Arena pequeña: 20 cm de radio. Hacer vídeos con esta arena y condición PRW-angulos discretos.
 6. Modelo de inmóviles con kilombo: mismos vecinos.
+
+
+
+## Dudas a resolver
+
+1. Cuánto tiempo pasa en cada loop
+
+### Pruebas 25/11/2021
+
+1. Subir el vidrio para ver si aumenta el área de comunicación
+2. Bots vistos en delta t: 100, 1000, 5000
+3. 

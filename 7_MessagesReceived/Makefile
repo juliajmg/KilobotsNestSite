@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=transmit_clock_beacons=1_wave.c json_state.c
+SOURCES=messages.c
 
 #name of the executable file
-EXECUTABLE=transmit_clock_dt=100_beacons=1_wave_allprw
+EXECUTABLE=messages_debug
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/
