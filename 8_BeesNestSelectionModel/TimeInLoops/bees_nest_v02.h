@@ -1,24 +1,16 @@
 
 // Declare constants
-#define N 50
+#define N AQUI
 #define NEST_TWO 2
 #define NEST_ONE 1 /* k number of nests  */
 #define NO_DANCE 0 /* constant of no dancing */
-#define LAMBDA 60
-#define PRIORI_ONE 10
-#define PRIORI_TWO 10
-#define QUALITY_ONE 1
-#define QUALITY_TWO 2
-#define DELTA_T 172
-#define IND_SEED 21
-#define OFF 0
-#define ON 1
-
-#define BEACON_1 17
-#define BEACON_2 18
-#define BEACON_3 20
-#define BEACON_4 31
-
+#define LAMBDA INTERDEP
+#define PRIORI_ONE PI1
+#define PRIORI_TWO PI2
+#define QUALITY_ONE Q1
+#define QUALITY_TWO Q2
+#define DELTA_T T
+#define IND_SEED IS
 // declare motion variable type
 typedef enum {
     STOP,
@@ -56,10 +48,6 @@ typedef struct {
   uint32_t bot_id;
   uint32_t bot_dsite; /* Variable to save dancing status of bee */
   uint32_t bot_qtime; /* Copy time of dancing of bot */
-  uint8_t  beacon_reset;
-  uint8_t  reset;
-  uint8_t bot_reset;
-  uint8_t beacon;
 
   uint32_t signals_total;
   uint32_t signals_one;
@@ -77,12 +65,6 @@ typedef struct {
   uint32_t update_time;
   uint32_t counter;
   uint32_t t;
-  uint8_t cycle;
-  uint8_t bot_t;
-  uint8_t my_cycle;
-  uint8_t bot_cycle;
-  uint8_t t_mod;
-  uint8_t bot_t_mod;
 
 } USERDATA;
 

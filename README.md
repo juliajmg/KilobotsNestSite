@@ -72,6 +72,7 @@ https://mega.nz/folder/3GgwDIAD#aVKxpuHiPXFEw4ke6cx-Jg
 
 
 
+
 # Próxima reunión:
 1. Probar con el material de allá.
 1. Explicar cómo estoy midiendo los Delta t.
@@ -83,12 +84,49 @@ https://mega.nz/folder/3GgwDIAD#aVKxpuHiPXFEw4ke6cx-Jg
 
 
 
-## Dudas a resolver
+## Cuánto tiempo pasa en cada loop
 
-1. Cuánto tiempo pasa en cada loop
+Evolución de los kiloticks con las iteraciones del loop: la evolución es lineal con un pendiente de aprox 0.58
 
-### Pruebas 25/11/2021
+$kilo ticks = 0.58*iteration$
 
-1. Subir el vidrio para ver si aumenta el área de comunicación
-2. Bots vistos en delta t: 100, 1000, 5000
-3. 
+![](counter_vs_kiloticks_kilobots_10.png)
+
+
+| kiloticks | iterations |
+| --------- | ---------- |
+| 100       | 172.41     |
+| 500       | 862        |
+| 1000      | 1724.1     |
+| 5000      | 8620.6     |
+
+## Iteraciones transcurridas entre mensajes
+
+$ReceivedMessage =  0.3to0.5*iteration^{-1}$
+
+
+
+## Pruebas 25/11/2021
+
+### Subir el vidrio para ver si aumenta el área de comunicación
+
+
+#### CONDICIONES
+
+- Oscuridad
+- Dos alturas del vidrio
+- 21 kilobots por altura.
+- Infrarrojo hacia arriba
+
+
+#### PROTOCOLO
+- Poner beacon en el centro, debajo del cristal
+- Medir la distancia máxima a la que llega la señal de sincronización
+- Anotar la distancia en una tabla.
+
+### Tiempo en loops en lugar de en kilo ticks
+
+Elegir la altura de vidrio.
+Hacer pruebas de sincronización a partir de loops para delta_t ~ 100, 1000, 5000 ticks
+
+### Bots vistos en delta t ~ 100, 1000, 5000 ticks

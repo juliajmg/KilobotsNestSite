@@ -4,15 +4,15 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=transmit_clock_beacons=1_wave_time=loop.c json_state.c
+SOURCES=loop_test.c json_state.c
 
 #name of the executable file
-EXECUTABLE=transmit_clock_dt=100_beacons=1_wave_time=loop
+EXECUTABLE=loop_test
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/
 #
-KILOHEADERS=/home/ju/kilolib
+KILOHEADERS=/home/ju/builds/kilolib
 
 # path of kilombo.h distributed with the simulator but also needed
 # when compiling the user program for the real kilobot (avr-gcc has different default paths)

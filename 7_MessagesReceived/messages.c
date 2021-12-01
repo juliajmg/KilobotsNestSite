@@ -127,8 +127,8 @@ void setup()
   rand_seed(kilo_uid + 1);
   mydata->last_motion_ticks = 0;
   mydata->turning_ticks = 0;
-  mydata->max_turning_ticks = 192;
-  mydata->max_straight_ticks = 60;
+  mydata->max_turning_ticks = 180;
+  mydata->max_straight_ticks = 120;
   mydata->current_motion_type = STOP;
 
 

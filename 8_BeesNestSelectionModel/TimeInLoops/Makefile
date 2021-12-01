@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=transmit_clock_beacons=1_wave_time=loop.c json_state.c
+SOURCES=bees_model=2_time=loop.c json_state.c
 
 #name of the executable file
-EXECUTABLE=transmit_clock_dt=100_beacons=1_wave_time=loop
+ EXECUTABLE=bees_model=2_t=loop_deltat=1000-q1=1000-q2=5000-p1=10-p2=10-lambda=00
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/
