@@ -4,15 +4,15 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=unique_bots_seen.c json_state.c
+SOURCES=unique_bots_seen_Deltat.c json_state.c
 
 #name of the executable fe
-EXECUTABLE=unique_bots_seen_40_turn180
+EXECUTABLE=unique_bots_seen_Deltat_stopped
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/
 #
-KILOHEADERS=/home/ju/builds/kilolib
+KILOHEADERS=/home/ju/kilolib
 
 # path of kilombo.h distributed with the simulator but also needed
 # when compiling the user program for the real kilobot (avr-gcc has different default paths)

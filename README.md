@@ -105,6 +105,29 @@ $kilo ticks = 0.58*iteration$
 $ReceivedMessage =  0.3to0.5*iteration^{-1}$
 
 
+### INFORMACIÓN DE MENSAJES
+
+
+Both the transmitter and receiver have an isotropic emission or reception pattern, which allow the robot to receive messages equally from all directions.
+
+**message_t *tx_message()**
+Callback for message transmission.
+
+This callback is triggered every time a message is scheduled for transmission (roughly twice every second).
+
+Kilobot can communicate at rates up to 30 kb/s
+With all robots using the same infrared channel for
+communication, there is the possibility that two or more
+robots may try to transmit at the same time. To mitigate
+this problem a standard carrier sense multiple access with
+collision avoidance (CSMA/CA) method is used.
+
+In an experiment with 25 robots, configured as shown in Fig. 2, the channel could support on average 240 five-byte packets/second, a 32% channel usage.
+
+Infrarred:  up to 7cm, up to 32kb/s  and 1kbyte/s with  25 robots, serial (256000 baud)
+
+1024 bytes = 1 KB (kilobytes).
+
 
 ## Pruebas 25/11/2021
 
@@ -130,3 +153,14 @@ Elegir la altura de vidrio.
 Hacer pruebas de sincronización a partir de loops para delta_t ~ 100, 1000, 5000 ticks
 
 ### Bots vistos en delta t ~ 100, 1000, 5000 ticks
+
+
+
+
+## PRUEBAS 02/DICIEMBRE/2021
+
+
+3. Ver qué ocurre con el modelo ya en marcha, pero que la luz marque la sincronización. Contando el tiempo de 256 ciclos. 200 iteraciones.
+4. Se alcanza el estado estacionario para 256 ciclos de 200 iteraciones.
+5. Bots vistos en delta_t.
+6. 200-400-800 2²

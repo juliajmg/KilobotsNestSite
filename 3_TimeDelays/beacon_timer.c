@@ -120,7 +120,7 @@ void update_message() {
 }
 
 
-void message_rx(message_t *message, distance_measurement_t *d) {
+/*void message_rx(message_t *message, distance_measurement_t *d) {
 
   mydata->dist = *d;
   mydata->new_message = 1;
@@ -130,7 +130,7 @@ void message_rx(message_t *message, distance_measurement_t *d) {
   mydata->bot_cycle = message->data[4];
 
 }
-
+*/
 
 
 
@@ -146,22 +146,12 @@ void setup()
   mydata->t = 0;
 
   mydata->cycle = 0;
-  mydata->bot_cycle = 0;
 
-  // Random motion variables
-  mydata->last_motion_ticks = 0;
-  mydata->turning_ticks = 0;
-  mydata->max_turning_ticks = 180;
-  mydata->max_straight_ticks = 120;
-  mydata->last_motion_ticks = rand_soft() % mydata->max_straight_ticks + 1;
 
   // Three still down-the-glass bots to cover arena radius
-  if((kilo_uid == 17) | (kilo_uid == 18) | (kilo_uid == 20)){
-  //if(kilo_uid == 17){
-    set_motion(STOP);
-  } else {
-    set_motion(FORWARD);
-  }
+  /*if((kilo_uid == 18) | (kilo_uid == 20) | (kilo_uid == 31)){*/
+
+  set_motion(STOP);
 
   set_color(RGB(0,0,0));
 
@@ -170,33 +160,18 @@ void setup()
 void loop()
 {
 
-  mydata->t = mydata->t + 1;
-  /*If bot is the beacon, reset time every delta t, and add one delta_t cycle to transmitted cycle variable  */
-  if(mydata->my_id == BEACON_1){
-      if(mydata->t % DELTA_T == DELTA_T - 1){
-    //if(kilo_ticks >= (mydata->t + (DELTA_T))){
+    mydata->t = mydata->t + 1;
+    /*If bot is the beacon, reset time every delta t, and add one delta_t cycle to transmitted cycle variable  */
 
-      mydata->cycle = mydata->cycle + 1;
-      //mydata->t = kilo_ticks;
+    if(mydata->t % DELTA_T == DELTA_T - 1){
+      //if(kilo_ticks >= (mydata->t + (DELTA_T))){
+
+    mydata->cycle = mydata->cycle + 1;
+        //mydata->t = kilo_ticks;
 
     }
-  }
-/* Else, if bot receives a message and received cycle is greater than bot cycle, change cycle to received cycle */
-  else{
-    if(mydata->new_message == 1){
-      mydata->new_message = 0;
-      if(mydata->bot_cycle > mydata->cycle){
-        mydata->cycle = mydata->bot_cycle;
-      }
-    }
 
-  }
 
-  if(mydata->my_id != BEACON_2 && mydata->my_id != BEACON_3){
-      random_walk();
-  }
-  /* Change led color every new cycle to check synchronization */
-  //if(mydata->my_id != BEACON_1){
     if(mydata->cycle % 3 == 0){
       set_color(RGB(1,0,0));
     }
@@ -207,12 +182,12 @@ void loop()
       set_color(RGB(1,1,1));
     }
   //}
-  update_message();
+    update_message();
 
 
     #ifdef DEBUG
     //printf("ID: %d\n", kilo_uid);
-    printf("Neighbor ID: %ld\n", mydata->bot_id);
+    //printf("Neighbor ID: %ld\n", mydata->bot_id);
     printf("Contador: %ld\n", mydata->t);
     printf("Ticks: %ld\n", kilo_ticks);
     printf("Ciclos: %d\n", mydata->cycle);
@@ -245,7 +220,7 @@ void loop()
     char *p = botinfo_buffer;
     p += sprintf (p, "ID: %d\n", kilo_uid);
     p += sprintf (p, "cycle: %d\n",mydata->cycle);
-    p += sprintf (p, "bot_cycle: %d\n", mydata->bot_cycle);
+  //  p += sprintf (p, "bot_cycle: %d\n", mydata->bot_cycle);
     return botinfo_buffer;
   }
   #include <jansson.h>
@@ -262,7 +237,7 @@ void loop()
     #endif
     // register message callbacks
 
-    kilo_message_rx = message_rx;
+    //kilo_message_rx = message_rx;
     kilo_message_tx = message_tx;
     // register your program
     kilo_start(setup, loop);

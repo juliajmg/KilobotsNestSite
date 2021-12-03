@@ -136,7 +136,7 @@ void setup()
   mydata->max_straight_ticks = 120;
   mydata->current_motion_type = STOP;
 
-  set_motion(FORWARD);
+  set_motion(STOP);
   //mydata->last_motion_ticks = rand_soft() % mydata->max_straight_ticks + 1;
   mydata->bots_seen = 0;
   mydata->bots_array = malloc(N*sizeof(uint8_t));
@@ -151,9 +151,9 @@ void setup()
 void loop()
 {
   if((kilo_ticks >= mydata->last_update) & (kilo_ticks < mydata->last_update + DELTAT)) {
-    random_walk();
+    //random_walk();
 
-    set_color(RGB(2,0,1));
+    //set_color(RGB(2,0,1));
     if(mydata->new_message == 1) {
       mydata->new_message = 0;
       if(mydata->bots_array[mydata->received_id]==0) {
