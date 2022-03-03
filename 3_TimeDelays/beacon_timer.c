@@ -60,48 +60,6 @@ void set_motion(motion_t new_motion)
 }
 
 
-void random_walk(){
-  uint8_t rand;
-  switch(mydata->current_motion_type) {
-    case LEFT:
-    case RIGHT:
-    if(kilo_ticks > mydata->last_motion_ticks + mydata->turning_ticks) {
-      /* start moving forward */
-      mydata->last_motion_ticks = kilo_ticks;
-      set_motion(FORWARD);
-      //set_color(RGB(0,1,0));
-    }
-    break;
-    case FORWARD:
-    if( kilo_ticks > mydata->last_motion_ticks + mydata->max_straight_ticks) {
-      /* perform a radnom turn */
-      mydata->last_motion_ticks = kilo_ticks;
-      if( rand_soft()%2) {
-        set_motion(LEFT);
-        //set_color(RGB(0,0,1));
-      }
-      else {
-        set_motion(RIGHT);
-        //set_color(RGB(1,0,0));
-      }
-      //mydata->turning_ticks = rand_soft()%mydata->max_turning_ticks + 1;
-
-
-      rand = rand_soft() % 2;
-      if(rand == 0){
-        mydata->turning_ticks = 90;
-      }
-      if(rand == 1){
-        mydata->turning_ticks = 180;
-      }
-    }
-    break;
-    case STOP:
-    default:
-    set_motion(STOP);
-  }
-}
-
 message_t *message_tx()
 {
   return &mydata->transmit_msg;
@@ -111,8 +69,8 @@ message_t *message_tx()
 
 void update_message() {
   mydata->transmit_msg.data[1] = mydata->my_id;
-  mydata->transmit_msg.data[2] = mydata->dancing;
-  mydata->transmit_msg.data[3] = mydata->quality_time;
+  mydata->transmit_msg.data[2] = 0;
+  mydata->transmit_msg.data[3] = 0;
   mydata->transmit_msg.data[4] = mydata->cycle;
   mydata->transmit_msg.type = NORMAL;
 
@@ -139,17 +97,12 @@ void update_message() {
 void setup()
 {
   // Random different for each bot
-  rand_seed(kilo_uid + IND_SEED);
   mydata->my_id = kilo_uid;
 
   // Variable to update time
   mydata->t = 0;
 
   mydata->cycle = 0;
-
-
-  // Three still down-the-glass bots to cover arena radius
-  /*if((kilo_uid == 18) | (kilo_uid == 20) | (kilo_uid == 31)){*/
 
   set_motion(STOP);
 
@@ -176,10 +129,10 @@ void loop()
       set_color(RGB(1,0,0));
     }
     if(mydata->cycle % 3 == 1){
-      set_color(RGB(0,0,1));
+      set_color(RGB(0,1,0));
     }
     if(mydata->cycle % 3 == 2){
-      set_color(RGB(1,1,1));
+      set_color(RGB(0,0,1));
     }
   //}
     update_message();

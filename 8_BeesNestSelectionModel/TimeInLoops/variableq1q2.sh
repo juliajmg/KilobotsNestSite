@@ -6,12 +6,12 @@ let p2=10
 
 #let seed=$RANDOM % 40
 
-for t in 1000
+for t in 400
 #for t in 5000
 
 do
 
-  let q2=5*t
+  let q2=4*t
 
   for qbad in 1
   do
@@ -20,7 +20,7 @@ do
 
     let simtime=t*10
     #for l in 00 10 20 30 40 50 60 70 80
-    for l in 00
+    for l in 60
     do
       echo "The value of \"t\" is $t."
       echo "The value of \"q1\" is $q1."
@@ -56,7 +56,7 @@ do
         sed -i "s/bees.json/bees_model=2_v=1_N=$ndig-deltat=$tdig-lambda=$l-q1=$q1dig-q2=$q2dig-p1=$p1-p2=$p2dig-motion=movil-t=$simtime-seed=$seed-indseed=$ind_seed-rep=$kdig.json/g" kilombo.json
         #sed -i "/\stateFileName\" : .*,/\"stateFileName\" : 'bees_model=0_v=1_N=$n-deltat=$tdig-lambda=$l-q1=$q1dig-q2=$q2dig-p1=$p1-p2=$p2-motion=movil-t=$simtime-seed=$seed-rep=$j.json',/g":
 
-        sed -i "s/\EXECUTABLE=.*/\ EXECUTABLE=bees_model=2_t=loop_deltat=$t-q1=$q1-q2=$q2-p1=$p1-p2=$p2-lambda=$l/g" Makefile
+        sed -i "s/\EXECUTABLE=.*/\  EXECUTABLE=bees_model=2_ModelLights_t=loop_deltat=$t-q1=$q1-q2=$q2-p1=$p1-p2=$p2-lambda=$l-color=RGB_beacons=2/g" Makefile
         #  make #
         make hex
 

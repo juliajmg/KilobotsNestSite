@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=bees_model=2_time=loop.c json_state.c
+SOURCES=bees_model=2_time=loop_beacons=2.c json_state.c
 
 #name of the executable file
- EXECUTABLE=bees_model=2_t=loop_deltat=1000-q1=1000-q2=5000-p1=10-p2=10-lambda=00
+          EXECUTABLE=bees_model=2_ModelLights_t=loop_deltat=400-q1=400-q2=1600-p1=10-p2=10-lambda=60-color=RGB_beacons=2
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

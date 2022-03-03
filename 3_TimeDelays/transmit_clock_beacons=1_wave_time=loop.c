@@ -209,7 +209,6 @@ void loop()
   //}
   update_message();
 
-
     #ifdef DEBUG
     //printf("ID: %d\n", kilo_uid);
     printf("Neighbor ID: %ld\n", mydata->bot_id);

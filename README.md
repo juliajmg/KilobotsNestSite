@@ -160,7 +160,157 @@ Hacer pruebas de sincronización a partir de loops para delta_t ~ 100, 1000, 500
 ## PRUEBAS 02/DICIEMBRE/2021
 
 
-3. Ver qué ocurre con el modelo ya en marcha, pero que la luz marque la sincronización. Contando el tiempo de 256 ciclos. 200 iteraciones.
+3. Modelo ya en marcha, pero que la luz marque la sincronización. Contando el tiempo de 256 ciclos. 200 iteraciones.
+   3.1. Contabilizar cuántos se pierden uno o dos ciclos:
+   - Contabilizar el periodo en segundos, del beacon para 200 iteraciones
+Por alguna razón, de 0.24 pasa a 0. Ej, 1.23, 1.24, 2.00. Por esto hay que restar .76 a todos los cálculos.
+
+
+
+**Extract image every x frames**
+g -i test.mp4 -vf "select=not(mod(n\,97))" -vsync vfr -q:v 2 images/RGB/out%3d.jpg
+
+
+ffmpeg -i test.mp4 -vf "select=not(mod(n\,(96 + round(random(0,2)))))" -vsync vfr -q:v 2 images/RGB/out%3d.jpg
+
+
+ffmpeg -i inVideo.mp4
+  -vf "select='between(t,30,30.5)+between(t,45,45.5)+between(t,73,73.5)'"
+  -s 320x240 -vsync 0 out%d.png
+
+select='eq(n\,100)+eq(n\,184)+eq(n\,213)'
+
+**Count number of frames in video**
+  ffprobe -v error -select_streams v:0 -count_packets -show_entries stream=nb_read_packets -of csv=p=0 test.mp4
+
+
+This actually counts packets instead of frames but it is much faster. Result should be the same. If you want to verify by counting frames change -count_packets to -count_frames and nb_read_packets to nb_read_frames.
+
+*What the ffprobe options mean*
+
+  *-v error This hides "info" output (version info, etc) which makes parsing easier (but makes it harder if you ask for help since it hides important info).*
+
+    *-count_frames Count the number of packets per stream and report it in the corresponding stream section.*
+
+    *-select_streams v:0 Select only the first video stream.*
+
+    *-show_entries stream=nb_read_packets Show only the entry for nb_read_frames.*
+
+    *-of csv=p=0 sets the output formatting. In this case it hides the descriptions and only shows the value. See FFprobe Writers for info on other formats including JSON.*
+
+
+
+| Delta_t | Mean Period (s.f) | frames (25f/s) |
+| ------- | ----------------- | -------------- |
+| 400     | 3.22              | 97-100         |
+| 200     | 1.19              | 46-50          |
+|         |                   |                |
+|         |                   |                |
+
+
+
+
+
+- Establecer un tiempo de medición en cada periodo donde se cuenta sincronización. Por ejemplo, a la mitad del periodo.
+- Obtener imágenes con fps correspondientes para el tiempo de medición elegido.
+- Contabilizar colores.
+
+
+
 4. Se alcanza el estado estacionario para 256 ciclos de 200 iteraciones.
 5. Bots vistos en delta_t.
 6. 200-400-800 2²
+
+
+
+
+
+Soluciones
+
+1. Tal vez ser más redundante
+2. Buscar sólo los píxeles del centro, correspondientes al beacon.
+3. Estirar el led con un cable para amplificar la luz del líder.
+4. Examinar si el líder es exacto en sus ciclos, si lo es, tomar directamente el número de frames por ciclo y obtener las imágenes.
+
+
+Bots vistos:
+
+Cuartiles por bots vistos, no por delta_t.
+
+Cuartiles
+
+hasta 12
+hasta 24
+hasta 25 al final
+
+
+hasta 9
+hasta 18
+hasta   
+
+
+
+delta t = 400 y 1600
+
+hacer entre 250 y 500 ciclos.
+
+
+## Reunión 21 diciembre de 2021
+- Hacerlo a la carta o con un módulo fijo, tomar fotografías.
+- Restringir N máximo a ver en bots vistos,y volver a sacar cuartiles con ese límite (por ejemplo, 20 es el máximo).
+
+
+
+# ENERO 2022
+
+## Por hacer, fecha límite 21/01/2022:
+
+1. Obtener fotogramas medios en el tiempo para delta_t = 800 y 1600 (hablar con Fabian para comprar servidores).
+2. Comparar resultados de bots vistos en delta_t= 400, 800, 1600 para fotogramas a la carta vs módulo fijo
+3. Grabar bots vistos con cuartiles normalizados a máx bots vistos para cada delta_t.
+
+
+| delta_t | percentil 1 rojo | percentil 2 verde | percentil 3 azul | Old Max Bots seen |
+| ------- | ---------------- | ----------------- | ---------------- | ----------------- |
+| 400     | 0-7              | 8-13              | 14-20            | 20                |
+| 800     | 0-7              | 8-13              | 14-20            | 20                |
+| 1600    | 0-7              | 8-13              | 14-20            | 20                |
+| 3600    | 0-10             | 11-20             | 21-30            | 30                |
+| 7200    | 0-10             | 11-20             | 21-30            | No hecho          |
+
+
+Utilizando seis colores:
+
+
+| delta_t | 1 rojo | 2 amarillo | 3 verde | 4 cyan | 5 azul | 6 magenta |
+| ------- | ------ | ---------- | ------- | ------ | ------ | --------- |
+| Todos   | 0-7    | 8-13       | 14-20   | 20-26  | 27-33  | 39        |
+
+
+# Procedimiento de extracción de fotogramas y m conteo de blobs
+Fotogramas a medida, archivo: ImageExtract_byLeaderCycleDuration.sh
+Fotogramas por módulo aleatorio en rango de lider, archivo: ImageExtract_byRandMod.sh
+
+10 fotogramas por ciclo, y sacar la derivada
+
+
+
+# Febrero 03 de 2022
+
+## Grabaciones
+
+1. Cuatro vídeos de 30 min de Bots Vistos para delta t = 3200
+2. Un vídeo del Modelo para delta t = 400, y delta t = 3200.
+
+## Extracción de imágenes
+
+
+**$\delta t = 400$**
+ffmpeg -i BotsSeen_deltat=0400_R=03_G=06_B=09_rad=70_rep=1_part=1.mp4 -vf "select=not(mod(n\,10))" -vsync vfr -q:v 2 BotsSeen_deltat=0400_R=03_G=06_B=09_rad=70_rep=1_part=1_Images/output%04d.jpg
+
+
+**$\delta t = 800$**
+ffmpeg -i  BotsSeen_deltat=0800_R=03_G=06_B=09_rad=70_rep=1_part=1.mp4 -vf "select=not(mod(n\,21))" -vsync vfr -q:v 2 BotsSeen_deltat=0800_R=03_G=06_B=09_rad=70_rep=1_part=1_Images/output%04d.jpg
+
+**$\delta t = 1600$**
+ffmpeg -i  BotsSeen_deltat=1600_R=03_G=06_B=09_rad=70_rep=1_part=1.mp4 -vf "select=not(mod(n\,42))" -vsync vfr -q:v 2 BotsSeen_deltat=1600_R=03_G=06_B=09_rad=70_rep=1_part=1_Images/output%04d.jpg

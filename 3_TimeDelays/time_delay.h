@@ -9,7 +9,7 @@
 #define PRIORI_TWO 10
 #define QUALITY_ONE 1
 #define QUALITY_TWO 2
-#define DELTA_T 172
+#define DELTA_T 1600
 #define IND_SEED 21
 #define OFF 0
 #define ON 1

@@ -11,6 +11,11 @@
 #define QUALITY_TWO Q2
 #define DELTA_T T
 #define IND_SEED IS
+
+#define BEACON_1 17
+#define BEACON_2 18
+#define BEACON_3 20
+#define BEACON_4 31
 // declare motion variable type
 typedef enum {
     STOP,
@@ -66,6 +71,9 @@ typedef struct {
   uint32_t counter;
   uint32_t t;
 
+  uint8_t cycle;
+  uint8_t bot_cycle;
 } USERDATA;
+
 
 extern USERDATA *mydata;
