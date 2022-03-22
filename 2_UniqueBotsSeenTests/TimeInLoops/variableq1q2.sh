@@ -12,7 +12,7 @@ let five=37
 
 #let seed=$RANDOM % 40
 
-for t in 400
+for t in 3200
 #for t in 5000
 
 do

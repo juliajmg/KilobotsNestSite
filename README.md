@@ -263,7 +263,6 @@ hacer entre 250 y 500 ciclos.
 
 # ENERO 2022
 
-## Por hacer, fecha límite 21/01/2022:
 
 1. Obtener fotogramas medios en el tiempo para delta_t = 800 y 1600 (hablar con Fabian para comprar servidores).
 2. Comparar resultados de bots vistos en delta_t= 400, 800, 1600 para fotogramas a la carta vs módulo fijo
@@ -295,17 +294,10 @@ Fotogramas por módulo aleatorio en rango de lider, archivo: ImageExtract_byRand
 
 
 
-# Febrero 03 de 2022
-
-## Grabaciones
-
-1. Cuatro vídeos de 30 min de Bots Vistos para delta t = 3200
-2. Un vídeo del Modelo para delta t = 400, y delta t = 3200.
-
 ## Extracción de imágenes
 
 
-**$\delta t = 400$**
+**$\Delta t = 400$**  
 ffmpeg -i BotsSeen_deltat=0400_R=03_G=06_B=09_rad=70_rep=1_part=1.mp4 -vf "select=not(mod(n\,10))" -vsync vfr -q:v 2 BotsSeen_deltat=0400_R=03_G=06_B=09_rad=70_rep=1_part=1_Images/output%04d.jpg
 
 
@@ -314,3 +306,50 @@ ffmpeg -i  BotsSeen_deltat=0800_R=03_G=06_B=09_rad=70_rep=1_part=1.mp4 -vf "sele
 
 **$\delta t = 1600$**
 ffmpeg -i  BotsSeen_deltat=1600_R=03_G=06_B=09_rad=70_rep=1_part=1.mp4 -vf "select=not(mod(n\,42))" -vsync vfr -q:v 2 BotsSeen_deltat=1600_R=03_G=06_B=09_rad=70_rep=1_part=1_Images/output%04d.jpg
+
+### Método marzo 2022 para extracción de imágenes
+
+**Idea general:** Cortar los primeros 30 cyclos, y cortar el final hasta el ciclo 255.
+
+1. Ver vídeo y anotar en qué minuto:segundo el líder apaga su luz después de encender verde, y en qué minuto:segundo enciende luz verde al final del vídeo.
+2. Cortar el vídeo:
+
+ffmpeg -ss 00:02:33 -i BeesModel_deltat=0400_p1=10_p2=10_q1=2_q2=3_lambda=20_rep=02.MP4 -to 00:18:15 -c copy cut.mp4
+
+
+3. Extraer imágenes cada x frame (moda de duración de ciclos para cada deltat), ya sea para el vídeo previamente cortado:
+
+ffmpeg -ss 00:00:02 -i  video.mp4 -vf "select=not(mod(n\,106))" -vsync vfr -q:v 2 output%04d.jpg
+
+O cortarlo y extraer imágenes al mismo tiempo
+
+ffmpeg -ss 00:02:33 -i BeesModel_deltat=0400_p1=10_p2=10_q1=2_q2=3_lambda=20_rep=02.MP4 -to 00:18:15 -vf "select=not(mod(n\,106))" -vsync vfr -q:v 2 BeesModel_deltat=0400_p1=10_p2=10_q1=2_q2=3_lambda=20_rep=02_Images/out%04d.jpg
+
+
+
+#### FFMPEG DOCUMENTATION
+Cutting small sections
+
+To extract only a small segment in the middle of a movie, it can be used in combination with -t which specifies the duration, like -ss 60 -t 10 to capture from second 60 to 70. Or you can use the -to option to specify an out point, like -ss 60 -to 70 to capture from second 60 to 70. -t and -to are mutually exclusive. If you use both, -t will be used.
+
+Note that if you specify -ss before -i only, the timestamps will be reset to zero, so -t and -to will have the same effect. If you want to keep the original timestamps, add the -copyts option.
+
+The first command will cut from 00:01:00 to 00:03:00 (in the original), using the faster seek.
+The second command will cut from 00:01:00 to 00:02:00, as intended, using the slower seek.
+The third command will cut from 00:01:00 to 00:02:00, as intended, using the faster seek.
+
+ffmpeg -ss 00:01:00 -i video.mp4 -to 00:02:00 -c copy cut.mp4
+ffmpeg -i video.mp4 -ss 00:01:00 -to 00:02:00 -c copy cut.mp4
+ffmpeg -ss 00:01:00 -i video.mp4 -to 00:02:00 -c copy -copyts cut.mp4
+
+
+
+### reunión 10 marzo
+
+
+1. Modificar código de iniciar ciclos en kilobots hasta que el beacon llegue a 30 ciclos, para todas las $\Delta t$'s
+2. Muestrear con módulo fijo a partir del ciclo 30, con módulo fijo como la duración más común (moda). Inferir los valores para $\Delta t > 800$.
+
+3. Power spectrum para identificar frecuencias características en el modelo de List, y del que viene de la ecuación maestra, y ver si los dos modelos coinciden también.
+
+   1. Menos ejecuciones en kilobots, y por lo tanto sería mejor analizar y comparar una sola repetición.

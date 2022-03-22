@@ -10,8 +10,8 @@
 #include <stdio.h> // for printf
 #else
 #include <avr/io.h>  // for microcontroller register defs
-//  #define DEBUG     // for printf to serial port
-//  #include "debug.h"
+#define DEBUG     // for printf to serial port
+#include "debug.h"
 #endif
 
 
@@ -101,7 +101,7 @@ void random_walk(){
     break;
     case STOP:
     default:
-    set_motion(STOP);
+    set_motion(FORWARD);
   }
 }
 
@@ -113,8 +113,7 @@ message_t *message_tx()
 void update_message() {
   mydata->transmit_msg.data[1] = mydata->my_id;
   mydata->transmit_msg.data[2] = mydata->dancing;
-  mydata->transmit_msg.data[3] = mydata->quality_time;
-  mydata->transmit_msg.data[4] = mydata->cycle;
+  mydata->transmit_msg.data[3] = mydata->cycle;
   mydata->transmit_msg.crc = message_crc(&mydata->transmit_msg);
 }
 
@@ -126,8 +125,7 @@ void message_rx(message_t *message, distance_measurement_t *d) {
   mydata->new_message = 1;
   mydata->bot_id = message->data[1];
   mydata->bot_dsite = message->data[2];
-  mydata->bot_qtime = message->data[3];
-  mydata->bot_cycle = message->data[4];
+  mydata->bot_cycle = message->data[3];
 
 
 
@@ -144,7 +142,7 @@ void reset_parameters(){
   mydata->p_two = 0;
   mydata->p_rand = 0;
 
-  mydata->dance_time = 0;
+  //mydata->dance_time = 0;
 
   // Reiniciar array de bots vistos
   for(uint32_t i=0;i<N;i++){
@@ -154,16 +152,19 @@ void reset_parameters(){
 
 
 void count_new_bot(){ // Junta información
+  if((mydata->bot_id != BEACON_1) && (mydata->bot_id != BEACON_2) && (mydata->bot_id != BEACON_3)){
+    mydata->distance = estimate_distance(&mydata->dist);
 
-  if(mydata->bots_dancing[mydata->bot_id]==0) {
-    mydata->bots_dancing[mydata->bot_id] = 1;
-    mydata->signals_total = mydata->signals_total + 1;
+    if((mydata->bots_dancing[mydata->bot_id]==0) & (mydata->distance <= 70)) {
+      mydata->bots_dancing[mydata->bot_id] = 1;
+      mydata->signals_total = mydata->signals_total + 1;
 
-    if(mydata->bot_dsite == NEST_ONE){
-      mydata->signals_one = mydata->signals_one + 1;
-    }
-    if(mydata->bot_dsite == NEST_TWO){
-      mydata->signals_two = mydata->signals_two + 1;
+      if(mydata->bot_dsite == NEST_ONE){
+        mydata->signals_one = mydata->signals_one + 1;
+      }
+      if(mydata->bot_dsite == NEST_TWO){
+        mydata->signals_two = mydata->signals_two + 1;
+      }
     }
   }
 }
@@ -173,7 +174,6 @@ void decide_dance(){
   // If you were dancing:
   if(mydata->i_was_dancing == 1){
     mydata->dancing = NO_DANCE;
-    mydata->quality_time = 0;
     mydata->dance_time  = 0;
     mydata->i_was_dancing = 0;
   }
@@ -194,29 +194,28 @@ void decide_dance(){
 
     if(mydata->p_rand < mydata->p_one){
       mydata->dancing = NEST_ONE;
-      set_color(RGB(1,0,0));
-      mydata->d = QUALITY_ONE + 1;
+      set_color(RGB(0,1,0));
+      //mydata->dance_time = 0;
     }
 
     if((mydata->p_rand > mydata->p_one) & (mydata->p_rand <= mydata->p_one + mydata->p_two)){
       mydata->dancing = NEST_TWO;
-      set_color(RGB(0,1,0));
-      mydata->d = QUALITY_TWO + 1;
+      set_color(RGB(0,0,1));
+      //mydata->dance_time = 0;
 
     }
     if((mydata->p_rand > mydata->p_one + mydata->p_two)){
       mydata->dancing = NO_DANCE;
-      set_color(RGB(0,0,1));
-      mydata->d = 0;
-      mydata->dance_time  = 0;
+      set_color(RGB(1,0,0));
+      mydata->dance_time = 0;
     }
   }
-
 }
 
 
 void setup()
 {
+  mydata->distance = 200;
   // Random different for each bot
   rand_seed(kilo_uid + IND_SEED);
   // I start not dancing */
@@ -227,11 +226,7 @@ void setup()
   reset_parameters();
 
   mydata->dancing = NO_DANCE;
-  mydata->quality_time = 0;
-  mydata->d = 0;
-  mydata->t = 0;
   mydata->i_was_dancing = 0;
-  mydata->dance_time = 0;
   mydata->f1 = 0;
   mydata->f2 = 0;
 
@@ -246,7 +241,6 @@ void setup()
   // Deltat sync variables
   mydata->cycle = 0;
   mydata->bot_cycle = 0;
-  mydata->t = 0;
   // Three still down-the-glass bots to cover arena radius
   if((mydata->my_id == BEACON_2) | (mydata->my_id == BEACON_3)){
     set_motion(STOP);
@@ -254,44 +248,55 @@ void setup()
     set_motion(FORWARD);
   }
 
-
-  set_color(RGB(0,0,0));
 }
 
 void loop()
 {
-
-  if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
-    random_walk();
+  /* 10/03/2022: Bots won't start until beacon cycle > 30 */
+  if(mydata->bot_cycle < 30){
+    set_motion(STOP);
   }
-
-  if(mydata->new_message == 1){
-    mydata->new_message = 0;
-    count_new_bot();
-
-    if(mydata->bot_cycle > mydata->cycle){
-      mydata->cycle = mydata->bot_cycle;
-      if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
-
-
-        if(mydata->dancing == NO_DANCE){
-          decide_dance();
-          reset_parameters();
+  else {
+        if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
+          random_walk();
         }
-        else {
-          mydata->dance_time = mydata->dance_time + 1;
-        }
-        if(mydata->dance_time % mydata->dancing == (mydata->dancing -1)){
-          mydata->dancing = NO_DANCE;
-          mydata->i_was_dancing = 1;
-          reset_parameters();
+
+        if(mydata->new_message == 1){
+          mydata->new_message = 0;
+          count_new_bot();
+          /* if new cycle */
+          if(mydata->bot_cycle > mydata->cycle){
+            mydata->cycle = mydata->bot_cycle;
+            if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
+              /* If I am not dancing, decide if start dancing and reset all */
+              if(mydata->dancing == NO_DANCE){
+                decide_dance();
+                reset_parameters();
+              }
+            /* else, sum one to dance time */
+              else {
+                mydata->dance_time = mydata->dance_time + 1;
+
+                if(mydata->dance_time == (mydata->dancing)){
+                  mydata->dancing = NO_DANCE;
+                  set_color(RGB(1,0,0));
+                  mydata->i_was_dancing = 1;
+                  mydata->dance_time = 0;
+                  reset_parameters();
+              }
+            }
+
         }
       }
     }
   }
-
-
   update_message();
+  #ifdef DEBUG
+  printf("dancing: %ld\n", mydata->dancing);
+  printf("dance_time: %ld\n", mydata->dance_time);
+  printf("i was dancing: %ld\n", mydata->i_was_dancing);
+  printf("cycle: %d\n", mydata->cycle);
+  #endif
 }
 
 
@@ -317,8 +322,8 @@ static char botinfo_buffer[10000];
 char *cb_botinfo(void)
 {
   char *p = botinfo_buffer;
-  p += sprintf (p, "bots seen: %d\n", mydata->signals_total);
-  p += sprintf (p, "delta t: %d\n",  mydata->t % DELTA_T);
+  p += sprintf (p, "bots seen: %d\n", mydata->dancing);
+  p += sprintf (p, "delta t: %d\n",  mydata->dance_time);
   p += sprintf (p, "t: %d\n", mydata->t);
 
 
@@ -333,6 +338,9 @@ int main() {
   SET_CALLBACK(obstacles, circle_barrier);
   // initialize hardware
   kilo_init();
+  #ifdef DEBUG
+    debug_init();
+  #endif
   // register message callbacks
   kilo_message_rx = message_rx;
   kilo_message_tx = message_tx;

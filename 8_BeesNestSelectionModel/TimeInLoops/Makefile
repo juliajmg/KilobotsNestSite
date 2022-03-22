@@ -7,7 +7,7 @@
 SOURCES=bees_model=2_time=loop_beacons=2.c json_state.c
 
 #name of the executable file
-          EXECUTABLE=bees_model=2_ModelLights_t=loop_deltat=400-q1=400-q2=1600-p1=10-p2=10-lambda=60-color=RGB_beacons=2
+                                              EXECUTABLE=bees_model=2_InitCycle=30_t=loop_deltat=400-q1=800-q2=2000-p1=10-p2=10-lambda=60-color=RGB_beacons=2
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

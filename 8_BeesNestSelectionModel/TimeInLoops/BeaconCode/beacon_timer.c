@@ -18,49 +18,6 @@
 REGISTER_USERDATA(USERDATA);
 
 
-void smooth_set_motors(uint8_t ccw, uint8_t cw)
-{
-  // OCR2A = ccw;  OCR2B = cw;
-  #ifdef KILOBOT
-  uint8_t l = 0, r = 0;
-  if (ccw && !OCR2A) // we want left motor on, and it's off
-  l = 0xff;
-  if (cw && !OCR2B)  // we want right motor on, and it's off
-  r = 0xff;
-  if (l || r)        // at least one motor needs spin-up
-  {
-    set_motors(l, r);
-    delay(15);
-  }
-  #endif
-  // spin-up is done, now we set the real value
-  set_motors(ccw, cw);
-}
-
-void set_motion(motion_t new_motion)
-{
-  if(mydata->current_motion_type != new_motion) {
-    switch(new_motion) {
-      case STOP:
-      default:
-      smooth_set_motors(0,0);
-      break;
-      case FORWARD:
-      smooth_set_motors(kilo_straight_left, kilo_straight_right);
-      break;
-      case LEFT:
-      smooth_set_motors(kilo_turn_left, 0);
-      break;
-      case RIGHT:
-      smooth_set_motors(0, kilo_turn_right);
-      break;
-    }
-    mydata->current_motion_type = new_motion;
-  }
-}
-
-
-
 message_t *message_tx()
 {
   return &mydata->transmit_msg;
@@ -71,8 +28,7 @@ message_t *message_tx()
 void update_message() {
   mydata->transmit_msg.data[1] = mydata->my_id;
   mydata->transmit_msg.data[2] = 0;
-  mydata->transmit_msg.data[3] = 0;
-  mydata->transmit_msg.data[4] = mydata->cycle;
+  mydata->transmit_msg.data[3] = mydata->cycle;
 
   mydata->transmit_msg.type = NORMAL;
   mydata->transmit_msg.crc = message_crc(&mydata->transmit_msg);
@@ -85,8 +41,7 @@ void update_message() {
   mydata->new_message = 1;
   mydata->bot_id = message->data[1];
   mydata->bot_dsite = message->data[2];
-  mydata->bot_qtime = message->data[3];
-  mydata->bot_cycle = message->data[4];
+  mydata->bot_cycle = message->data[3];
 
 }
 */
@@ -105,7 +60,7 @@ void setup()
 
   mydata->cycle = 0;
 
-  set_motion(STOP);
+  //set_motion(STOP);
 
   set_color(RGB(0,0,0));
 
@@ -125,35 +80,26 @@ void loop()
 
         //mydata->t = kilo_ticks;
     }
-    
+    if(mydata->cycle == 29){
+      set_color(RGB(0,1,0));
+    } else{
+      if(mydata->cycle == 255){
+        set_color(RGB(0,2,1));
+      } else {
+        set_color(RGB(0,0,0));
+      }
+    }
+
 
     update_message();
 
 
     #ifdef DEBUG
-    //printf("ID: %d\n", kilo_uid);
-    //printf("Neighbor ID: %ld\n", mydata->bot_id);
     printf("Contador: %ld\n", mydata->t);
     printf("Ticks: %ld\n", kilo_ticks);
     printf("Ciclos: %d\n", mydata->cycle);
-    //printf("t: %ld\n", mydata->t % DELTA_T);
-    //printf("Ticks: %ld\n", kilo_ticks);
-    //printf("Cycle = %d\n", mydata->cycle);
+
     #endif
-  }
-
-
-  int16_t circle_barrier(double x, double y, double * dx, double * dy)
-  {
-    double d = sqrt(x*x + y*y);
-
-    if (d < 200.0)
-    return 0;
-
-    *dx = -x/d;
-    *dy = -y/d;
-
-    return 1;
   }
 
   //*************************************** (^_^) ******************************/

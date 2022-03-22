@@ -101,7 +101,7 @@ void random_walk(){
     break;
     case STOP:
     default:
-    set_motion(STOP);
+    set_motion(FORWARD);
   }
 }
 
@@ -257,57 +257,61 @@ void setup()
   } else {
     set_motion(FORWARD);
   }
-
-
   set_color(RGB(0,0,0));
 }
 
 void loop()
 {
-//set_motion(STOP);
-  if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
-    random_walk();
+  /* 10/03/2022: Bots won't start until beacon cycle > 30 */
+  if(mydata->bot_cycle <= 30){
+    set_motion(STOP);
+    update_message();
   }
+  else {
+    if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
+      random_walk();
+    }
 
-  if(mydata->new_message == 1){
-    mydata->new_message = 0;
-    count_new_bot();
+    if(mydata->new_message == 1){
+      mydata->new_message = 0;
+      count_new_bot();
 
-    if(mydata->bot_cycle > mydata->cycle){
-      mydata->cycle = mydata->bot_cycle;
-      mydata->bots_seen = mydata->signals_total;
-      if(mydata->dancing == NO_DANCE){
-        decide_dance();
-        reset_parameters();
-      }
-      else {
-        mydata->dance_time = mydata->dance_time + 1;
-      }
-      if(mydata->dance_time % mydata->dancing == (mydata->dancing - 1)){
-        mydata->dancing = NO_DANCE;
-        mydata->i_was_dancing = 1;
-        reset_parameters();
+      if(mydata->bot_cycle > mydata->cycle){
+        mydata->cycle = mydata->bot_cycle;
+        mydata->bots_seen = mydata->signals_total;
+        if(mydata->dancing == NO_DANCE){
+          decide_dance();
+          reset_parameters();
+        }
+        else {
+          mydata->dance_time = mydata->dance_time + 1;
+        }
+        if(mydata->dance_time % mydata->dancing == (mydata->dancing - 1)){
+          mydata->dancing = NO_DANCE;
+          mydata->i_was_dancing = 1;
+          reset_parameters();
+        }
       }
     }
-  }
-  /* Change led color every new cycle with bots seen */
+    /* Change led color every new cycle with bots seen */
 
-  update_message();
-  if(mydata->my_id != BEACON_2 && mydata->my_id != BEACON_3){
-    if(mydata->bots_seen == 0){
-      set_color(RGB(1,1,1));
-    }
-    if(mydata->bots_seen <= ONE){
-      set_color(RGB(1,0,0));
-    }
-    if((mydata->bots_seen > ONE) & (mydata->bots_seen <= TWO)){
-      set_color(RGB(0,1,0));
-    }
-    if((mydata->bots_seen > TWO) & (mydata->bots_seen <= THREE)){
-      set_color(RGB(0,0,1));
-    }
-    if(mydata->bots_seen > THREE){
-      set_color(RGB(0,0,1));
+    update_message();
+    if(mydata->my_id != BEACON_2 && mydata->my_id != BEACON_3){
+      if(mydata->bots_seen == 0){
+        set_color(RGB(1,1,1));
+      }
+      if(mydata->bots_seen <= ONE){
+        set_color(RGB(1,0,0));
+      }
+      if((mydata->bots_seen > ONE) & (mydata->bots_seen <= TWO)){
+        set_color(RGB(0,1,0));
+      }
+      if((mydata->bots_seen > TWO) & (mydata->bots_seen <= THREE)){
+        set_color(RGB(0,0,1));
+      }
+      if(mydata->bots_seen > THREE){
+        set_color(RGB(0,0,1));
+      }
     }
   }
 }

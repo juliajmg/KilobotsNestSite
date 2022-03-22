@@ -3,6 +3,8 @@
 let n=40
 let p1=10
 let p2=10
+let n1=2
+let n2=5
 
 #let seed=$RANDOM % 40
 
@@ -11,9 +13,9 @@ for t in 400
 
 do
 
-  let q2=4*t
+  let q2=$n2*t
 
-  for qbad in 1
+  for qbad in $n1
   do
     #let q1="$qbad*t" | bc
     let q1=$qbad*t
@@ -33,6 +35,8 @@ do
         echo "the ind_seed is $ind_seed"
         sed -i "s/\"nBots\" : .*,/\"nBots\" : $n,/g" kilombo.json
         sed -i "s/#define N AQUI/#define N $n/g" bees_nest_v02.h
+        sed -i "s/#define NEST_ONE N1/#define NEST_ONE $n1/g" bees_nest_v02.h
+        sed -i "s/#define NEST_TWO N2/#define NEST_TWO $n2/g" bees_nest_v02.h
         sed -i "s/#define PRIORI_ONE PI1/#define PRIORI_ONE $p1/g" bees_nest_v02.h
         sed -i "s/#define PRIORI_TWO PI2/#define PRIORI_TWO $p2/g" bees_nest_v02.h
         sed -i "s/#define QUALITY_ONE Q1/#define QUALITY_ONE $q1/g" bees_nest_v02.h
@@ -56,7 +60,7 @@ do
         sed -i "s/bees.json/bees_model=2_v=1_N=$ndig-deltat=$tdig-lambda=$l-q1=$q1dig-q2=$q2dig-p1=$p1-p2=$p2dig-motion=movil-t=$simtime-seed=$seed-indseed=$ind_seed-rep=$kdig.json/g" kilombo.json
         #sed -i "/\stateFileName\" : .*,/\"stateFileName\" : 'bees_model=0_v=1_N=$n-deltat=$tdig-lambda=$l-q1=$q1dig-q2=$q2dig-p1=$p1-p2=$p2-motion=movil-t=$simtime-seed=$seed-rep=$j.json',/g":
 
-        sed -i "s/\EXECUTABLE=.*/\  EXECUTABLE=bees_model=2_ModelLights_t=loop_deltat=$t-q1=$q1-q2=$q2-p1=$p1-p2=$p2-lambda=$l-color=RGB_beacons=2/g" Makefile
+        sed -i "s/\EXECUTABLE=.*/\  EXECUTABLE=bees_model=2_InitCycle=30_t=loop_deltat=$t-q1=$q1-q2=$q2-p1=$p1-p2=$p2-lambda=$l-color=RGB_beacons=2/g" Makefile
         #  make #
         make hex
 
@@ -66,6 +70,8 @@ do
         sed -i "s/#define N $n/#define N AQUI/g" bees_nest_v02.h
         sed -i "s/#define PRIORI_ONE $p1/#define PRIORI_ONE PI1/g" bees_nest_v02.h
         sed -i "s/#define PRIORI_TWO $p2/#define PRIORI_TWO PI2/g" bees_nest_v02.h
+        sed -i "s/#define NEST_ONE $n1/#define NEST_ONE N1/g" bees_nest_v02.h
+        sed -i "s/#define NEST_TWO $n2/#define NEST_TWO N2/g" bees_nest_v02.h
         sed -i "s/#define QUALITY_ONE $q1/#define QUALITY_ONE Q1/g" bees_nest_v02.h
         sed -i "s/#define QUALITY_TWO $q2/#define QUALITY_TWO Q2/g" bees_nest_v02.h
         sed -i "s/#define LAMBDA $l/#define LAMBDA INTERDEP/g" bees_nest_v02.h
