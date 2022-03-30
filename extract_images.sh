@@ -23,4 +23,4 @@ case "$3" in
 
 esac
 
-ffmpeg -ss $ss -i $1 -vf "select=not(mod(n\, $mod))" -vsync vfr -q:v 2 $2/output%04d.jpg
+ffmpeg -ss $ss -i $1 -vf "select=not(mod(n\, $mod))" -q:v 2 $2/output%04d.jpg

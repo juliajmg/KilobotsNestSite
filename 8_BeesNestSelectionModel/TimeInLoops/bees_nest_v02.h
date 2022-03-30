@@ -16,6 +16,9 @@
 #define BEACON_2 18
 #define BEACON_3 20
 #define BEACON_4 31
+
+#define WAIT 1
+#define CONTINUE 0
 // declare motion variable type
 typedef enum {
     STOP,
@@ -68,6 +71,9 @@ typedef struct {
 
   uint8_t cycle;
   uint8_t bot_cycle;
+
+  uint8_t current_state;
+  uint8_t bot_state;
 } USERDATA;
 
 

@@ -107,6 +107,7 @@ void update_message() {
   mydata->transmit_msg.data[1] = mydata->my_id;
   mydata->transmit_msg.data[2] = mydata->dancing;
   mydata->transmit_msg.data[3] = mydata->cycle;
+  mydata->transmit_msg.data[4] = mydata->current_state;
   mydata->transmit_msg.crc = message_crc(&mydata->transmit_msg);
 }
 
@@ -119,6 +120,7 @@ void message_rx(message_t *message, distance_measurement_t *d) {
   mydata->bot_id = message->data[1];
   mydata->bot_dsite = message->data[2];
   mydata->bot_cycle = message->data[3];
+  mydata->bot_state = message->data[4];
 
 }
 
@@ -232,12 +234,16 @@ void setup()
   // Deltat sync variables
   mydata->cycle = 0;
   mydata->bot_cycle = 0;
+
+  mydata->current_state = CONTINUE;
+  mydata->bot_state = CONTINUE;
   // Three still down-the-glass bots to cover arena radius
   if((mydata->my_id == BEACON_2) | (mydata->my_id == BEACON_3)){
     set_motion(STOP);
   } else {
     set_motion(FORWARD);
   }
+
 
 }
 
@@ -246,18 +252,27 @@ void loop()
   /* 10/03/2022: Bots won't start until beacon cycle > 30 */
   if(mydata->bot_cycle < 30){
     set_motion(STOP);
+    set_color(RGB(0,0,0));
   }
   else {
-    if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
-      random_walk();
+    if(mydata->cycle == 41){
+      set_motion(STOP);
+      set_color(RGB(2,0,3));
+    } else {
+      if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
+        random_walk();
+      }
     }
 
     if(mydata->new_message == 1){
       mydata->new_message = 0;
+      mydata->bot_state = mydata->current_state;
       count_new_bot();
       /* if new cycle */
       if(mydata->bot_cycle > mydata->cycle){
         mydata->cycle = mydata->bot_cycle;
+
+
         if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
           /* If I am not dancing, decide if start dancing and reset all */
           if(mydata->dancing == NO_DANCE){
@@ -280,14 +295,14 @@ void loop()
       }
     }
   }
-
-  
   update_message();
+
   #ifdef DEBUG
   printf("dancing: %ld\n", mydata->dancing);
-  printf("dance_time: %ld\n", mydata->dance_time);
+  //printf("dance_time: %ld\n", mydata->dance_time);
   printf("i was dancing: %ld\n", mydata->i_was_dancing);
   printf("cycle: %d\n", mydata->cycle);
+  printf("bot cycle %d\n", mydata->bot_cycle);
   #endif
 }
 
