@@ -58,3 +58,18 @@ Por alguna razón, de 0.24 pasa a 0. Ej, 1.23, 1.24, 2.00. Por esto hay que rest
 1. Obtener fotogramas medios en el tiempo para delta_t = 800 y 1600 (hablar con Fabian para comprar servidores).
 2. Comparar resultados de bots vistos en delta_t= 400, 800, 1600 para fotogramas a la carta vs módulo fijo
 3. Grabar bots vistos con cuartiles normalizados a máx bots vistos para cada delta_t.
+
+
+# 31 de marzo 2022
+
+1. Difusividad: coeficiente de difusión en el desplazaiento cuadrático medio.
+2. difusión = velocidad^2 / tau
+3. Si no se mueven (régimen de velocidad 0), cómo queda el consenso.
+4. Estimar el desplazamiento cuadrático medio en el kilombo.
+
+5. Hacer un vídeo de los robots moviéndose en el espacio, con luz, y pasárselo a Carmen para que calcule el desplazamiento cuadrático medio.
+
+6. Terminar de grabar delta t = 1600, con las condiciones que ya tengo.
+7. Ver con David zonas en el histograma de densidad que tienen.
+
+8. Bots vistos de uno y de otro,

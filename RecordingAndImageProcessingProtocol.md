@@ -5,7 +5,11 @@
 ### Before starting
 - Remmember to always check voltage and replace batteries of low-battery/dead kilobots.
 
-- Check camera battery
+- Check camera battery and settings
+
+1/250
+ISO 500
+Obturador 11 
 
 - Once a week run the code "IDdebug" to confirm all kilobots have an ID assigned.
 
@@ -13,7 +17,7 @@
 1. Order kilobots with beacons below the glass and distribute the rest randomly over the circle.
 2. Run the program, and set a timer to start recording right before the 30th cycle starts (beacon will turn green in cycle=29).
 3. Record the rest of the cycles up until cycle=255 or the camera dies haha.
-4. For $\Delta t > 800$ two videos will be recorded to include all cycles.
+4. For $\Delta t > 800$ two or more videos will be recorded to include all cycles.
 
 
 ## Image Extraction
@@ -48,7 +52,7 @@ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.wav
 The -safe 0 above is not required if the paths are relative.
 Automatically generating the input file
 
-It is possible to generate this list file with a bash for loop, or using printf. Either of the following would generate a list file containing every *.wav in the working directory:
+It is possible to generate this list file with a bash for loop. Either of the following would generate a list file containing every *.wav in the working directory:
 ```bash
 # with a bash for loop
 for f in *.mp4; do echo "file '$f'" >> mylist.txt; done

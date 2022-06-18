@@ -1,13 +1,3 @@
-### 1. Simulaciones en campo medio para:
-
-N=50? 40?  
-
-$\pi_1 = \pi_2 = 0.10$
-
-$q_1 = 2$, $q_2 = 3,4,5$  
-
-$\lambda = 0.2, 0.6$
-
 
 ### 2. Optimizar la extracción de imágenes
 

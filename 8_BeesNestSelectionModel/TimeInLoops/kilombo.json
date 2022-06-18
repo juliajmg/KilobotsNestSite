@@ -1,6 +1,6 @@
 {
     "botName" : "random bot",
-    "randSeed" : 12279,
+    "randSeed" : 30089,
     "nBots" : 40,
     "formation" : "random",
     "timeStep" : 0.0322579,

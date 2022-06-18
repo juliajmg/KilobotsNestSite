@@ -1,7 +1,7 @@
 
 
 #define IND_SEED 21
-#define DELTA_T 100
+#define DELTA_T 800
 
 #define WAIT 1
 #define CONTINUE 0

@@ -63,6 +63,10 @@ typedef struct {
   uint32_t signals_two;
   uint32_t *bots_dancing;
 
+  // Random for probabilities variables
+  mydata->p;
+
+
 
   uint32_t p_one;
   uint32_t p_two;

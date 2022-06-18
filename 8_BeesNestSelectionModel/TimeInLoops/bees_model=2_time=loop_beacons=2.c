@@ -75,7 +75,7 @@ void random_walk(){
     if( kilo_ticks > mydata->last_motion_ticks + mydata->max_straight_ticks) {
       /* perform a radnom turn */
       mydata->last_motion_ticks = kilo_ticks;
-      if( rand_soft()%2 ) {
+      if( rand_soft()%2) {
         set_motion(LEFT);
       }
       else {
@@ -221,6 +221,10 @@ void setup()
   mydata->f1 = 0;
   mydata->f2 = 0;
 
+  // Random for probabilities variables
+  mydata->p = 0;
+  mydata->p_rand = 0;
+
   // Random motion variables
   mydata->last_motion_ticks = 0;
   mydata->turning_ticks = 0;
@@ -255,33 +259,45 @@ void loop()
     if(mydata->new_message == 1){
       mydata->new_message = 0;
       count_new_bot();
-      /* if new cycle */
-      if(mydata->bot_cycle > mydata->cycle){
-        mydata->cycle = mydata->bot_cycle;
-        if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
-          /* If I am not dancing, decide if start dancing and reset all */
-          if(mydata->dancing == NO_DANCE){
-            decide_dance();
-            reset_parameters();
-          }
-          /* else, sum one to dance time */
-          else {
-            mydata->dance_time = mydata->dance_time + 1;
+    }
 
-            if(mydata->dance_time == (mydata->dancing)){
-              mydata->dancing = NO_DANCE;
-              set_color(RGB(1,0,0));
-              mydata->i_was_dancing = 1;
-              mydata->dance_time = 0;
-              reset_parameters();
-            }
+    if(mydata->t % DELTA_T == (DELTA_T - 3)){
+      mydata->p = rand_soft();
+
+    }
+    
+    while(mydata->p >= (255 - (255 % 100))){
+      mydata->p = rand_soft();
+    }
+    if(mydata->p < 200){
+      mydata->p_rand = mydata->p % 100;
+    }
+    /* if new cycle */
+    if(mydata->bot_cycle > mydata->cycle){
+      mydata->cycle = mydata->bot_cycle;
+      if((mydata->my_id != BEACON_2) && (mydata->my_id != BEACON_3)){
+        /* If I am not dancing, decide if start dancing and reset all */
+        if(mydata->dancing == NO_DANCE){
+          decide_dance();
+          reset_parameters();
+        }
+        /* else, sum one to dance time */
+        else {
+          mydata->dance_time = mydata->dance_time + 1;
+
+          if(mydata->dance_time == (mydata->dancing)){
+            mydata->dancing = NO_DANCE;
+            set_color(RGB(1,0,0));
+            mydata->i_was_dancing = 1;
+            mydata->dance_time = 0;
+            reset_parameters();
           }
         }
       }
     }
   }
 
-  
+
   update_message();
   #ifdef DEBUG
   printf("dancing: %ld\n", mydata->dancing);

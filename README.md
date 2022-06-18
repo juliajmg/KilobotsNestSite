@@ -22,7 +22,6 @@
 
 Evolución de los kiloticks con las iteraciones del loop: la evolución es lineal con un pendiente de aprox 0.58
 
-$kilo ticks = 0.58*iteration$
 
 ![](counter_vs_kiloticks_kilobots_10.png)
 
@@ -49,19 +48,13 @@ Callback for message transmission.
 
 This callback is triggered every time a message is scheduled for transmission (roughly twice every second).
 
-Kilobots can communicate at rates up to 30 kb/s
-With all robots using the same infrared channel for
-communication, there is the possibility that two or more
-robots may try to transmit at the same time. To mitigate
-this problem a standard carrier sense multiple access with
-collision avoidance (CSMA/CA) method is used.
+Kilobots can communicate at rates up to 30 kb/s with all robots using the same infrared channel for communication, there is the possibility that two or more robots may try to transmit at the same time. To mitigate this problem a standard carrier sense multiple access with collision avoidance (CSMA/CA) method is used.
 
 In an experiment with 25 robots, configured as shown in Fig. 2, the channel could support on average 240 five-byte packets/second, a 32% channel usage.
 
 Infrarred:  up to 7cm, up to 32kb/s  and 1kbyte/s with  25 robots, serial (256000 baud)
 
 1024 bytes = 1 KB (kilobytes).
-
 
 
 **Extract image every x frames**
@@ -107,7 +100,7 @@ This actually counts packets instead of frames but it is much faster. Result sho
 - Establecer un tiempo de medición en cada periodo donde se cuenta sincronización. Por ejemplo, a la mitad del periodo.
 - Obtener imágenes con fps correspondientes para el tiempo de medición elegido.
 - Contabilizar colores.
-- 
+-
 
 # Procedimiento de extracción de fotogramas y m conteo de blobs
 Fotogramas a medida, archivo: ImageExtract_byLeaderCycleDuration.sh
@@ -151,15 +144,3 @@ The third command will cut from 00:01:00 to 00:02:00, as intended, using the fas
 ffmpeg -ss 00:01:00 -i video.mp4 -to 00:02:00 -c copy cut.mp4
 ffmpeg -i video.mp4 -ss 00:01:00 -to 00:02:00 -c copy cut.mp4
 ffmpeg -ss 00:01:00 -i video.mp4 -to 00:02:00 -c copy -copyts cut.mp4
-
-
-
-### reunión 10 marzo
-
-
-1. Modificar código de iniciar ciclos en kilobots hasta que el beacon llegue a 30 ciclos, para todas las $\Delta t$'s
-2. Muestrear con módulo fijo a partir del ciclo 30, con módulo fijo como la duración más común (moda). Inferir los valores para $\Delta t > 800$.
-
-3. Power spectrum para identificar frecuencias características en el modelo de List, y del que viene de la ecuación maestra, y ver si los dos modelos coinciden también.
-
-   1. Menos ejecuciones en kilobots, y por lo tanto sería mejor analizar y comparar una sola repetición.
