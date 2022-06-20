@@ -2,18 +2,33 @@
 
 ## Recording
 
-### Before starting
+## Before starting
 - Remmember to always check voltage and replace batteries of low-battery/dead kilobots.
 
 - Check camera battery and settings
 
 1/250
 ISO 500
-Obturador 11 
+Obturador 11
 
 - Once a week run the code "IDdebug" to confirm all kilobots have an ID assigned.
 
-### Procedure
+
+1. **Asegurarse que todos tengan ID**:
+   Iniciar el script *id_debug.hex*. Los kilobots encenderán la luz si tienen un ID $\mod 10$, i.e. el bot con ID = 1 encenderá del mismo color que el ID 11, 21, 31 y 41. Si no enciende luz, es que no tiene ID.
+2. **Patas de kilobots rectas**:
+   Utilizar el aparato 3D printed.
+
+
+3. **Comprobar que los kilobots estén calibrados**
+   Iniciar el script *go_straight.hex*. Se considera que un bot está calibrado si pueden ir recto 15 cm, en una anchura de 7.5 cm.
+   Calibrar a los kilobots que se necesite con base en los valores de la tabla:
+    https://docs.google.com/spreadsheets/d/1lLEAYlaw0cSjxO7ze2P7xQTy3PDm-wXrka6_WbAYmzk/edit#gid=1138819062.
+   Si estos valores no aseguran ir recto, modificarlos y documentarlo en la tabla.
+
+
+
+## Procedure
 1. Order kilobots with beacons below the glass and distribute the rest randomly over the circle.
 2. Run the program, and set a timer to start recording right before the 30th cycle starts (beacon will turn green in cycle=29).
 3. Record the rest of the cycles up until cycle=255 or the camera dies haha.
