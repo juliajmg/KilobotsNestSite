@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=beacon_timer.c
+SOURCES=beacon_timer_countbots.c
 
 #name of the executable file
-EXECUTABLE=beacon_timer_record
+EXECUTABLE=beacon_timer_dt=800_light=cycle29_countbots
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

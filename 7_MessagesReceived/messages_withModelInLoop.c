@@ -247,7 +247,7 @@ void setup()
   mydata->max_straight_ticks = 60;
   mydata->last_motion_ticks = rand_soft() % mydata->max_straight_ticks + 1;
 
-  set_motion(FORWARD);
+  //set_motion(FORWARD);
 
 }
 
@@ -255,7 +255,7 @@ void loop()
 {
   mydata->contador = mydata->contador + 1;
 
-  random_walk();
+  //random_walk();
   if(mydata->new_message == 1){
     mydata->new_message = 0;
     mydata->signals = mydata->signals + 1;

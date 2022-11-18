@@ -1,0 +1,523 @@
+{
+  "bot_states": [
+    {
+      "ID": 0,
+      "direction": 71.047867000039574,
+      "state": {
+        "BotsSeen": 3,
+        "Dance time": 4984,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 3,
+        "time": 175817
+      },
+      "x_position": -105.87784844933211,
+      "y_position": 73.678206303415294
+    },
+    {
+      "ID": 1,
+      "direction": -59.050820995059503,
+      "state": {
+        "BotsSeen": 2,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 0,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": -225.06138475996011,
+      "y_position": 110.550857543619
+    },
+    {
+      "ID": 2,
+      "direction": -1.915119631254083,
+      "state": {
+        "BotsSeen": 4,
+        "Dance time": 2584,
+        "Dancing": 2,
+        "bots1": 1,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": -236.7776314454465,
+      "y_position": -54.958066842328094
+    },
+    {
+      "ID": 3,
+      "direction": -9.2485943704043549,
+      "state": {
+        "BotsSeen": 3,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 1,
+        "bots2": 0,
+        "time": 175817
+      },
+      "x_position": 213.32529350937187,
+      "y_position": 80.441748005856979
+    },
+    {
+      "ID": 4,
+      "direction": 22.055991715327238,
+      "state": {
+        "BotsSeen": 4,
+        "Dance time": 184,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 3,
+        "time": 175817
+      },
+      "x_position": -64.199900829140788,
+      "y_position": 256.40938522220631
+    },
+    {
+      "ID": 5,
+      "direction": 105.11062086044905,
+      "state": {
+        "BotsSeen": 9,
+        "Dance time": 984,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 7,
+        "time": 175817
+      },
+      "x_position": 10.642706205883911,
+      "y_position": 139.26662819854948
+    },
+    {
+      "ID": 6,
+      "direction": 115.43082706393992,
+      "state": {
+        "BotsSeen": 2,
+        "Dance time": 6584,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": 120.00990940538786,
+      "y_position": 197.68855440830407
+    },
+    {
+      "ID": 7,
+      "direction": -1.2356633319147576,
+      "state": {
+        "BotsSeen": 6,
+        "Dance time": 2584,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 6,
+        "time": 175817
+      },
+      "x_position": 26.66711538678161,
+      "y_position": 212.45314806202728
+    },
+    {
+      "ID": 8,
+      "direction": -57.342238565948563,
+      "state": {
+        "BotsSeen": 5,
+        "Dance time": 4184,
+        "Dancing": 2,
+        "bots1": 2,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": -191.98400196938891,
+      "y_position": -90.895714068699377
+    },
+    {
+      "ID": 9,
+      "direction": 53.22909556855182,
+      "state": {
+        "BotsSeen": 6,
+        "Dance time": 1784,
+        "Dancing": 1,
+        "bots1": 1,
+        "bots2": 5,
+        "time": 175817
+      },
+      "x_position": -91.851273344979759,
+      "y_position": -43.551307770863922
+    },
+    {
+      "ID": 10,
+      "direction": -86.932076863297993,
+      "state": {
+        "BotsSeen": 1,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 0,
+        "bots2": 1,
+        "time": 175817
+      },
+      "x_position": 82.807232867957026,
+      "y_position": -137.46206536395297
+    },
+    {
+      "ID": 11,
+      "direction": -63.862474270201773,
+      "state": {
+        "BotsSeen": 11,
+        "Dance time": 1784,
+        "Dancing": 2,
+        "bots1": 1,
+        "bots2": 9,
+        "time": 175817
+      },
+      "x_position": -46.465654436934599,
+      "y_position": 35.920297975994991
+    },
+    {
+      "ID": 12,
+      "direction": 55.287138886088712,
+      "state": {
+        "BotsSeen": 0,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 0,
+        "bots2": 0,
+        "time": 175817
+      },
+      "x_position": 145.85297829472381,
+      "y_position": -205.83452678032259
+    },
+    {
+      "ID": 13,
+      "direction": -42.688558236654828,
+      "state": {
+        "BotsSeen": 5,
+        "Dance time": 4984,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 5,
+        "time": 175817
+      },
+      "x_position": -46.112360692352887,
+      "y_position": -130.86681533148408
+    },
+    {
+      "ID": 14,
+      "direction": 81.569860465008247,
+      "state": {
+        "BotsSeen": 2,
+        "Dance time": 7384,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 0,
+        "time": 175817
+      },
+      "x_position": -255.137038759424,
+      "y_position": 90.990715531548418
+    },
+    {
+      "ID": 15,
+      "direction": 27.505820878837138,
+      "state": {
+        "BotsSeen": 7,
+        "Dance time": 3384,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 6,
+        "time": 175817
+      },
+      "x_position": 40.604170957112927,
+      "y_position": -69.211707560156398
+    },
+    {
+      "ID": 16,
+      "direction": 2.4357215762547093,
+      "state": {
+        "BotsSeen": 8,
+        "Dance time": 184,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 7,
+        "time": 175817
+      },
+      "x_position": -22.840918713893359,
+      "y_position": 151.24950945995596
+    },
+    {
+      "ID": 17,
+      "direction": -48.496347959667325,
+      "state": {
+        "BotsSeen": 2,
+        "Dance time": 5784,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": -159.17955536761033,
+      "y_position": 209.37579307607788
+    },
+    {
+      "ID": 18,
+      "direction": -32.613015281091464,
+      "state": {
+        "BotsSeen": 1,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 1,
+        "bots2": 0,
+        "time": 175817
+      },
+      "x_position": 220.50141116928617,
+      "y_position": 18.518672370549218
+    },
+    {
+      "ID": 19,
+      "direction": -51.199479385473516,
+      "state": {
+        "BotsSeen": 4,
+        "Dance time": 4184,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 4,
+        "time": 175817
+      },
+      "x_position": 128.67282926930255,
+      "y_position": -56.285789677573298
+    },
+    {
+      "ID": 20,
+      "direction": 13.61181435109293,
+      "state": {
+        "BotsSeen": 2,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 1,
+        "bots2": 0,
+        "time": 175817
+      },
+      "x_position": 174.6602295521937,
+      "y_position": 81.51401520722726
+    },
+    {
+      "ID": 21,
+      "direction": 65.69821081115019,
+      "state": {
+        "BotsSeen": 1,
+        "Dance time": 0,
+        "Dancing": 0,
+        "bots1": 0,
+        "bots2": 1,
+        "time": 175817
+      },
+      "x_position": -279.37360888421063,
+      "y_position": 1.9099552771846708
+    },
+    {
+      "ID": 22,
+      "direction": -44.353974475126357,
+      "state": {
+        "BotsSeen": 2,
+        "Dance time": 7384,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": -196.97146573801493,
+      "y_position": -51.886196926427452
+    },
+    {
+      "ID": 23,
+      "direction": -32.164670779183233,
+      "state": {
+        "BotsSeen": 3,
+        "Dance time": 6584,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 3,
+        "time": 175817
+      },
+      "x_position": 97.379531661944569,
+      "y_position": -39.103822048043092
+    },
+    {
+      "ID": 24,
+      "direction": -35.21450387557995,
+      "state": {
+        "BotsSeen": 7,
+        "Dance time": 4184,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 5,
+        "time": 175817
+      },
+      "x_position": 27.73861829414323,
+      "y_position": -151.97871063363519
+    },
+    {
+      "ID": 25,
+      "direction": 26.725106319353603,
+      "state": {
+        "BotsSeen": 9,
+        "Dance time": 184,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 8,
+        "time": 175817
+      },
+      "x_position": 15.951666440303386,
+      "y_position": -104.57853755043922
+    },
+    {
+      "ID": 26,
+      "direction": -39.129225261542892,
+      "state": {
+        "BotsSeen": 6,
+        "Dance time": 984,
+        "Dancing": 1,
+        "bots1": 1,
+        "bots2": 5,
+        "time": 175817
+      },
+      "x_position": 179.29651287851436,
+      "y_position": 47.198331040228176
+    },
+    {
+      "ID": 27,
+      "direction": 12.87818124915235,
+      "state": {
+        "BotsSeen": 1,
+        "Dance time": 5784,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 1,
+        "time": 175817
+      },
+      "x_position": -166.09647690150936,
+      "y_position": -162.87135061460791
+    },
+    {
+      "ID": 28,
+      "direction": 37.663197983964722,
+      "state": {
+        "BotsSeen": 8,
+        "Dance time": 984,
+        "Dancing": 1,
+        "bots1": 1,
+        "bots2": 4,
+        "time": 175817
+      },
+      "x_position": -117.68349303759217,
+      "y_position": -65.799498531645966
+    },
+    {
+      "ID": 29,
+      "direction": 32.586396526964904,
+      "state": {
+        "BotsSeen": 1,
+        "Dance time": 7384,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 1,
+        "time": 175817
+      },
+      "x_position": -141.19921054121383,
+      "y_position": -213.11874502887915
+    },
+    {
+      "ID": 30,
+      "direction": 26.641606552704616,
+      "state": {
+        "BotsSeen": 3,
+        "Dance time": 184,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 3,
+        "time": 175817
+      },
+      "x_position": 111.71426097219287,
+      "y_position": -229.2026476857389
+    },
+    {
+      "ID": 31,
+      "direction": 5.2486232620206454,
+      "state": {
+        "BotsSeen": 7,
+        "Dance time": 1784,
+        "Dancing": 2,
+        "bots1": 1,
+        "bots2": 5,
+        "time": 175817
+      },
+      "x_position": -108.17584157597136,
+      "y_position": -106.61683373843552
+    },
+    {
+      "ID": 32,
+      "direction": 1.3756829839066906,
+      "state": {
+        "BotsSeen": 3,
+        "Dance time": 5784,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 2,
+        "time": 175817
+      },
+      "x_position": 156.24901171959053,
+      "y_position": 185.10930084309297
+    },
+    {
+      "ID": 33,
+      "direction": 9.8843255251700946,
+      "state": {
+        "BotsSeen": 5,
+        "Dance time": 1784,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 4,
+        "time": 175817
+      },
+      "x_position": -76.246108887743404,
+      "y_position": 54.303952381382878
+    },
+    {
+      "ID": 34,
+      "direction": -38.537046412699631,
+      "state": {
+        "BotsSeen": 9,
+        "Dance time": 2584,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 8,
+        "time": 175817
+      },
+      "x_position": 23.156790851961105,
+      "y_position": 32.648424147253948
+    },
+    {
+      "ID": 35,
+      "direction": 1.999291322028542,
+      "state": {
+        "BotsSeen": 1,
+        "Dance time": 7384,
+        "Dancing": 2,
+        "bots1": 0,
+        "bots2": 1,
+        "time": 175817
+      },
+      "x_position": -62.065796576845862,
+      "y_position": 220.48855172636479
+    },
+    {
+      "ID": 36,
+      "direction": 61.907990865710907,
+      "state": {
+        "BotsSeen": 9,
+        "Dance time": 984,
+        "Dancing": 2,
+        "bots1": 1,
+        "bots2": 7,
+        "time": 175817
+      },
+      "x_position": -38.573364785549813,
+      "y_position": 1.8738379268782213
+    }
+  ],
+  "ticks": 49600
+}

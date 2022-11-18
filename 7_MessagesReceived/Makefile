@@ -4,10 +4,10 @@
 # configured below, these needs to be adapted to the system.
 
 #list of c files in this project
-SOURCES=messages_withModelInLoop.c
+SOURCES=messages.c
 
 #name of the executable file
-EXECUTABLE=messages_debug_withModel
+EXECUTABLE=messages_debug
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

@@ -8,8 +8,8 @@
 #include <stdio.h> // for printf
 #else
 #include <avr/io.h>  // for microcontroller register defs
-//  #define DEBUG     // for printf to serial port
-//  #include "debug.h"
+#define DEBUG     // for printf to serial port
+#include "debug.h"
 #endif
 
 
@@ -164,6 +164,10 @@ void loop()
     set_color(RGB(1,3,0));
   }
 
+  #ifdef DEBUG
+  printf("my_id: %d\n", kilo_uid);
+  #endif
+
 }
 
 //*************************************** (^_^) ******************************1
@@ -202,6 +206,9 @@ int main() {
     SET_CALLBACK(obstacles, circle_barrier);
     // initialize hardware
     kilo_init();
+    #ifdef DEBUG
+    debug_init();
+    #endif
 
     // register your program
     kilo_start(setup, loop);

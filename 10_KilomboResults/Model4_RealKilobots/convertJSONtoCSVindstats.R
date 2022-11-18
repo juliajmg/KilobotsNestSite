@@ -7,14 +7,14 @@ library(ggplot2)
 library(stringr)
 
 
-files <- list.files(pattern = "*_N=037-deltat=*")
+files <- list.files(pattern = "*speed=9_msuccess=1*")
 
-  files
+files
 
 coord_list <- list()
 
 for(i in 1:length(files)){
-
+  print(files[i])
   coord_df <- fromJSON(files[i], flatten = T)$bot_state
 
   ticks_df <- fromJSON(files[i], flatten = T)$ticks
@@ -44,11 +44,11 @@ for(i in 1:length(files)){
   rep <- str_extract(files[i], "rep=...")
   rep <- as.numeric(str_remove(rep, "rep="))
 
-
-  fname <- paste("BeesModel_",nbots,"_deltat=",deltat,"_p1=",p_one,"_p2=", p_two,"_q1=0",q_one,"_q2=0",q_two,"_lambda=",lamb,"_rep=0",rep,"_kilombo.csv", sep = "")
+  rep <- str_pad(rep, 2, pad = "0")
+  fname <- paste("BeesModel_speed=09_msuccess=100_",nbots,"_deltat=",deltat,"_p1=",p_one,"_p2=", p_two,"_q1=0",q_one,"_q2=",q_two,"_lambda=",lamb,"f0static_rep=",rep,"_kilombo.csv", sep = "")
   
   write.csv(coord_df, fname, row.names = FALSE)         
 
 
 }
-  
+# 

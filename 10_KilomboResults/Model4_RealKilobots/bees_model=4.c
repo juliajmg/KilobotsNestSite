@@ -121,9 +121,6 @@ void message_rx(message_t *message, distance_measurement_t *d) {
   mydata->bot_id = message->data[1];
   mydata->bot_dsite = message->data[2];
   mydata->bot_qtime = message->data[3];
-
-
-
 }
 
 
@@ -246,17 +243,18 @@ void loop()
   }
 
   if(kilo_ticks > 1){
+
     if(mydata->t % DELTA_T == (DELTA_T - 3)){
       mydata->p = rand_soft();
 
     }
 
-      while(mydata->p >= (255 - (255 % 100))){
-        mydata->p = rand_soft();
-      }
-      if(mydata->p < 200){
-        mydata->p_rand = mydata->p % 100;
-      }
+    while(mydata->p >= (255 - (255 % 100))){
+      mydata->p = rand_soft();
+    }
+    if(mydata->p < 200){
+      mydata->p_rand = mydata->p % 100;
+    }
     // NEW: Different time units to calculate probabilities and dance duration.
     if((mydata->t % DELTA_T == DELTA_T - 1) && (mydata->dancing == NO_DANCE)){
       decide_dance();

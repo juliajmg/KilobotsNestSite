@@ -7,7 +7,7 @@
 SOURCES=bees_model=4.c json_state.c
 
 #name of the executable file
-EXECUTABLE=bees_model=2_v=1_loop_deltat=1000
+EXECUTABLE=bees_model=4
 # Path to the official kilolib, used for real bots only
 # Set it here, or as an environment variable in the shell:
 #      export KILOHEADERS=/your/path/

@@ -1,30 +1,29 @@
 #!/bin/bash
 
 let n=37
-let p1=25
-let p2=25
+let p1=15
+let p2=05
 
 #let seed=$RANDOM % 40
 
 for t in 800
-#for t in 400
 
 do
 
-  let q1=16*t
+  let q1=02*t
 
-  for qhigh in 30
+  for qhigh in 3 4 5
   do
     #let q1="$qbad*t" | bc
     let q2=$qhigh*t
 
     let simtime=t*2
-    #for l in 00 10 20 30 40 50 60 70 80
+
     for l in 00 20 40 60 80
     do
       echo "The value of \"t\" is $t."
       echo "The value of \"q1\" is $q1."
-      for ((j=0; j<10; j++));
+      for ((j=0; j<50; j++));
       do
         let k=j
         let seed=$RANDOM+1

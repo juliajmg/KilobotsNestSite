@@ -12,14 +12,14 @@ let five=37
 
 #let seed=$RANDOM % 40
 
-for t in 3200
+for t in 800
 #for t in 5000
 
 do
 
-  let q2=3*t
+  let q2=10*t
 
-  for qbad in 1
+  for qbad in 7
   do
     #let q1="$qbad*t" | bc
     let q1=$qbad*t

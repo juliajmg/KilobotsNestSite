@@ -67,14 +67,14 @@ typedef struct {
   uint32_t f1;
   uint32_t f2;
   uint32_t signals_two;
-  uint32_t *bots_dancing;
+  uint8_t *bots_dancing;
 
 
   uint32_t p_one;
   uint32_t p_two;
   uint32_t p_zero;
-  uint32_t p_rand;
-
+  uint8_t p_rand;
+  uint8_t p;
   uint32_t update_time;
   uint32_t counter;
   uint32_t t;
